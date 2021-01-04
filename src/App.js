@@ -1,11 +1,11 @@
 import './App.css';
+import bg from './images/jumani.webp'
 
 function App() {
   return (
     <div className="App">
-      <p>hello world</p>
+        <img src={bg} alt='img' className='background' />
     </div>
   );
 }
-
 export default App;
