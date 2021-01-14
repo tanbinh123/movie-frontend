@@ -45,7 +45,6 @@ ReactDOM.render(
       <Route path="/Privacy" component={Privacy}/>
       <Route path="/Vacatures" component={Vacatures}/>
       <Route path="/WettelijkeBepalingen" component={WettelijkeBepalingen}/>
-
       </Switch>
       <Footer />
       </Router>
