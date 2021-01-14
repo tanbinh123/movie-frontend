@@ -4,7 +4,7 @@ import '../App.css';
 function Mediacenter() {
   return (
     <div >
-        <p>Mediacenter</p>
+        <p className='Discover'>Mediacenter</p>
     </div>
   );
 }

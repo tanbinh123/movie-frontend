@@ -4,7 +4,7 @@ import '../App.css';
 function Gebruiksvoorwaarden() {
   return (
     <div >
-        <p>Gebruiksvoorwaarden</p>
+        <p className='Discover'>Gebruiksvoorwaarden</p>
     </div>
   );
 }
