@@ -4,7 +4,7 @@ import '../App.css';
 function Privacy() {
   return (
     <div >
-        <p>Privacy</p>
+        <p className='Discover'>Privacy</p>
     </div>
   );
 }

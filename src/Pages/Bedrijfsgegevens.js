@@ -5,7 +5,7 @@ import '../App.css';
 function Bedrijfsgegevens() {
   return (
     <div>
-        <h2>Informatie over Netflix Corporate</h2>
+        <h2 className='Discover'>Informatie over Netflix Corporate</h2>
         <p>Netflix heeft leden in allerlei verschillende landen. Het hangt af van het land waar je woont welke Netflix-entiteit je toegang biedt tot de Netflix-service en in aanmerking komt als verantwoordelijke voor de verwerking van je gegevens. De entiteit wordt vermeld in de e-mail waarin je lidmaatschap of betaling wordt bevestigd.</p>
         
         <h3>Netflix, Inc.</h3>

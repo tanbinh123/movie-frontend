@@ -4,7 +4,7 @@ import '../App.css';
 function Cadeaubonnen() {
   return (
     <div >
-        <p>Cadeaubonnen</p>
+        <p className='Discover'>Cadeaubonnen</p>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import '../App.css';
 function WettelijkeBepalingen() {
   return (
     <div >
-        <p>Wettelijke bepalingen</p>
+        <p className='Discover'>Wettelijke bepalingen</p>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import '../App.css';
 function Contact() {
   return (
     <div >
-        <p>Contact opnemen</p>
+        <p className='Discover'>Contact opnemen</p>
     </div>
   );
 }

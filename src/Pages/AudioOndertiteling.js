@@ -4,7 +4,7 @@ import '../App.css';
 function AudioOndertiteling() {
   return (
     <div>
-        <p>Audio ondertiteling</p>
+        <p className='Discover'>Audio ondertiteling</p>
     </div>
   );
 }

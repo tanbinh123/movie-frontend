@@ -4,7 +4,7 @@ import '../App.css';
 function Vacatures() {
   return (
     <div >
-        <p>Vacatures</p>
+        <p className='Discover'>Vacatures</p>
     </div>
   );
 }

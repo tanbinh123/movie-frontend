@@ -4,7 +4,7 @@ import '../App.css';
 function CookieVoorkeuren() {
   return (
     <div >
-        <p>Cookie-voorkeuren</p>
+        <p className='Discover'>Cookie-voorkeuren</p>
     </div>
   );
 }

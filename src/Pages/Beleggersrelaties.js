@@ -4,7 +4,7 @@ import '../App.css';
 function Beleggers() {
   return (
     <div >
-        <p>Beleggersrelaties</p>
+        <p className='Discover'>Beleggersrelaties</p>
     </div>
   );
 }
