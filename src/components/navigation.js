@@ -55,7 +55,7 @@ export default class App extends React.Component {
                 <Nav.Link href="/discover">Discover</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/film">Film</Nav.Link>
+                <Nav.Link href="/film" className="film-nav">Film</Nav.Link>
             </Nav.Item>
         </Nav>
     );

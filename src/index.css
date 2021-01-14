@@ -2,7 +2,6 @@
     font-family: 'Helvetica';
     src: local('Helvetica'), url(./fonts/Helvetica\ Neu\ Bold.ttf) format('truetype');
   }
-  
   body{
     background-color: black;
     color: white;
