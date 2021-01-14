@@ -1,21 +1,23 @@
 import '../App.css';
-import Nav from 'react-bootstrap/Nav'
+import Nav from 'react-bootstrap/Nav';
+import Logo from '../images/netflix.png';
 
 function App() {
     return (
         <Nav
-            activeKey="/home"
-            onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
             className="navigation"
         >
             <Nav.Item>
-                <Nav.Link href="/home">Home</Nav.Link>
+            <img src={Logo} alt='img' className='logo' />
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Discover</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-2">Film</Nav.Link>
+                <Nav.Link href="/discover">Discover</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link href="/film">Film</Nav.Link>
             </Nav.Item>
         </Nav>
     );
