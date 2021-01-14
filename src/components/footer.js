@@ -8,9 +8,22 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer>
-      <div className="footer-box">
-        <ul className="footer-links">
+    <div> 
+      <div className="footer-iconbox">
+    <a href="https://www.facebook.com/NetflixNederland">
+      <AiOutlineFacebook />
+    </a>
+    <a href="https://www.instagram.com/netflixnl/?hl=nl">
+      <AiOutlineInstagram />
+    </a>
+    <a href="https://twitter.com/netflix">
+      <AiFillTwitterSquare />
+    </a>
+    <a href="https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw">
+      <AiOutlineYoutube />
+    </a>
+  </div>
+        <div className="footer-links">
           <div className="link-container">
           <Link to="/AudioOndertiteling">
             <li>Audio en ondertiteling</li>
@@ -58,23 +71,8 @@ function Footer() {
             <li>Gebruiksvoorwaarden</li>
           </Link>
           </div>
-       </ul>
        </div>
-       <div className="footer-iconbox">
-        <a href="https://www.facebook.com/NetflixNederland">
-          <AiOutlineFacebook />
-        </a>
-        <a href="https://www.instagram.com/netflixnl/?hl=nl">
-          <AiOutlineInstagram />
-        </a>
-        <a href="https://twitter.com/netflix">
-          <AiFillTwitterSquare />
-        </a>
-        <a href="https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw">
-          <AiOutlineYoutube />
-        </a>
-      </div>
-     </footer>
+     </div>
   );
 }
 
