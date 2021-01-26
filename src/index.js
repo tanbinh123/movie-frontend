@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Lane1 from './components/lane1'
+import Lane2 from './components/lane2'
+import Lane3 from './components/lane3'
+// import Lane4 from './components/lane4'
+// import Lane5 from './components/lane5'
 import Footer from './components/footer'
 import Navigation from './components/navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -46,6 +51,11 @@ ReactDOM.render(
       <Route path="/Vacatures" component={Vacatures}/>
       <Route path="/WettelijkeBepalingen" component={WettelijkeBepalingen}/>
       </Switch>
+      <Lane1 />
+      <Lane2 />
+      <Lane3 />
+      {/* <Lane4 /> */}
+      {/* <Lane5 /> */}
       <Footer />
       </Router>
     </Container>

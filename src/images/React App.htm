@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/fingerprint.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">@font-face {
+  font-family: 'Avertabold';
+  src: local('Avertabold'), url(/static/media/AVERTA-EXTRABOLD.3d4a2cff.TTF) format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 800px;
+  font-family: 'Averta' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: #FFFF00;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-left: 10px;
+}
+</style><style type="text/css">.signout-button{
+  max-width: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.signup-button{
+  max-width: 200px;
+  margin-top: 150px;
+}
+.login-button{
+  margin-top: 150px;
+}
+.signup-button{
+  margin-top: 150px;
+  max-height: 40px;
+}
+.form{
+  margin-top: 30px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-link {
+  color: #61dafb;
+}
+
+.quiz {
+  background-color: #FFFF00;
+  margin-top: 100px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 35px;
+  max-width: 400px;
+  color: black;
+}
+.quiz-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  margin-bottom: 20px;
+  float: right;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px;
+  align-items: center;
+  border: 5px solid #FFFF00;
+  cursor: pointer;
+}
+.correct {
+  background-color: #2f922f;
+}
+.incorrect {
+  background-color: #ff3333;
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+}
+.recaptcha{
+  margin-top: 50px;
+}
+.logo-container{
+  display: flex;
+  flex-direction: row;
+}
+.App-logo {
+  height: 6vmin;
+  pointer-events: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+}
+.logo-tekst{
+  font-size: 30px;
+}
+footer{
+  position: relative;
+  margin-top: 30px;
+  bottom: 0;
+  background-color: rgb(41, 41, 41);
+  width: 100%;
+}
+.footer-text-container{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+.footer-text{
+  margin-right: 30px;
+  margin-left:30px;
+}
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */</style><style type="text/css">@font-face {
+	font-family: 'Avertabold';
+	src: local('Avertabold'), url(/static/media/AVERTA-EXTRABOLD.3d4a2cff.TTF) format('truetype');
+  }
+ul {
+	list-style: none;
+	padding: 0;
+	width: 30%;
+	margin: auto;
+}
+li {
+	font-size: 1.3rem;
+	line-height: 2rem;
+}
+.btn-style {
+	/* display: flex;
+	justify-content: center;
+	flex-direction: row; */
+	color: black;
+	background-color: #FFFF00;
+	cursor: pointer;
+	margin-left: 600px;
+	margin-right: auto;
+	font-family: 'DINNextLTPro-BoldCondensed';
+	font-size: 16px;
+	max-width: 200px;
+}
+
+.btn-option {
+	color: black;
+	background-color: #FFFF00;
+	cursor: pointer;
+	padding: 5px;
+	margin: 10px;
+	font-family: 'DINNextLTPro-Condensed';
+	font-size: 32px;
+}
+.btn-option:hover {
+	background-color:#fdfd3c; 
+  }
+.button:active {
+    outline: none;
+	border: none;
+	border-radius: 5px;
+}
+button:focus {
+	outline: 2px solid white;
+}
+.quiz-container{
+	display: flex;
+}
+.question{
+	font-size: 60px;
+	text-transform: uppercase;
+	font-family: Avertabold;
+}
+</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/1.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.e817cccb0ec1b10c5f43.hot-update.js"></script>
+
+</body></html>

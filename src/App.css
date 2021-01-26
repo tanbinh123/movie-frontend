@@ -6,7 +6,8 @@ body{
 }
 
 .app{
-    height: 1200px;
+    position: relative;
+    top:100px;
 }
 a { 
     color: inherit;
@@ -72,6 +73,12 @@ p{
     font-size: 15px;
     color: white;
 }
+.react-player{
+    position: relative;
+    top: -57px;
+    bottom: -57px;
+    margin-bottom:300px;
+}
 .Film{
     padding-top: 100px;
     padding-bottom: 100px;
@@ -101,7 +108,7 @@ p{
 }
 .info-button{
     position: absolute;
-    top: 500px;
+    /* top: 300px; */
     height: 50px;
     width: 160px;
     left: 170px;
@@ -118,6 +125,45 @@ p{
 .info-button-icon{
     margin-right: 10px;
     font-size: 20px;
+}
+.add-button{
+    position: absolute;
+    top: 600px;
+    height: 50px;
+    width: 160px;
+    left: 340px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.like-button{
+    position: absolute;
+    top: 600px;
+    height: 50px;
+    width: 160px;
+    left: 400px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dislike-button{
+    position: absolute;
+    top: 600px;
+    height: 50px;
+    width: 160px;
+    left: 460px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .movietitle{
     font-size: 100px;
@@ -169,6 +215,9 @@ li {
     font-size: 20px;
     color: #808080;
 } 
+.footer-iconbox svg{
+    margin-right: 5px;
+}
 @media screen and (min-width: 539px) {
     .footer-iconbox {
         font-size: 20px;
@@ -256,7 +305,7 @@ li {
     }
     .movie-logo{
         top: 280px;
-        width:400px;
+        width:500px;
     }
     .movie-overview{
         top: 430px;
