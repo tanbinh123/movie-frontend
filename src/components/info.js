@@ -5,6 +5,7 @@ import { VscTriangleRight } from 'react-icons/vsc';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BiDislike } from 'react-icons/bi';
 import { BiLike } from 'react-icons/bi';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import '../App.css';
 
 function Lane({youtube, overview, backdrop, toggleTrueFalse} ) {
@@ -21,9 +22,10 @@ function Lane({youtube, overview, backdrop, toggleTrueFalse} ) {
         controls={false}
         width="cover"
         height="500px"
-        playIcon={<button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>}
+        playIcon={<button className='info-play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>}
       />
-      <button onClick={toggleTrueFalse} className='add-button' ><AiOutlinePlus /></button>
+      <AiOutlineCloseCircle onClick={toggleTrueFalse} className='close-button' />
+      <button className='add-button' ><AiOutlinePlus /></button>
       <button className='dislike-button' ><BiDislike /></button>
       <button className='like-button'><BiLike /></button>
       <p className="movie-overview">{overview}</p>

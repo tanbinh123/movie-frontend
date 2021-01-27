@@ -24,3 +24,81 @@
     border-radius: 5px;
     margin-top:10px; 
 }
+.close-button{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 40px;
+    color: white;
+    /* filter: invert(100%) ; */
+    
+}
+.info-play-button{
+    position: absolute;
+    top: 400px;
+    left: 35px;
+    height: 50px;
+    width: 120px;
+    padding-top:5px ;
+    padding-bottom:5px ;
+    border-radius: 5px;
+    color:black;
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+}
+.info-play-button:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.info-play-button-icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.add-button{
+    position: absolute;
+    top: 400px;
+    height: 50px;
+    width: 160px;
+    left: 170px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.like-button{
+    position: absolute;
+    top: 400px;
+    height: 50px;
+    width: 160px;
+    left: 230px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dislike-button{
+    position: absolute;
+    top: 400px;
+    height: 50px;
+    width: 160px;
+    left: 290px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.movie-overview{
+    position: absolute;
+    top: 600px;
+    left: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 550px;
+    color: white;
+    font-size: 16px;
+}
