@@ -6,6 +6,7 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { BiDislike } from 'react-icons/bi';
 import { BiLike } from 'react-icons/bi';
 import './App.css';
+import Info from './components/info.js'
 
 require('dotenv').config()
 
@@ -27,7 +28,8 @@ async function Api() {
 Api();
 
 function App() {
-
+  const [on, setOn] = useState(false);
+  console.log(on)
   const [logo, setLogo] = useState("");
   const [overview, setOverview] = useState("");
   const [youtube, setYoutube] = useState("");
@@ -62,7 +64,7 @@ function App() {
   fetchLogoJSON().then(result => {
     setLogo(result.hdmovielogo[0].url);
   });
-
+  const toggleTrueFalse = () => setOn(!on);
   return (
     <div className="App">
       <div className="react-player">
@@ -83,12 +85,14 @@ function App() {
       <p className="movie-overview">{overview}</p>
       <div className="buttons">
       {/* <button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button> */}
-      <button className='info-button'><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
+      <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
       <button className='add-button' ><AiOutlinePlus /></button>
       <button className='dislike-button' ><BiDislike /></button>
       <button className='like-button'><BiLike /></button>
       </div>
+      <div>{on ? <Info /> : null}</div>
     </div>
+    
   );
 }
 export default App;
