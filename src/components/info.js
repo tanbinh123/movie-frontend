@@ -7,7 +7,7 @@ import { BiDislike } from 'react-icons/bi';
 import { BiLike } from 'react-icons/bi';
 import '../App.css';
 
-function Lane({youtube, overview, backdrop} ) {
+function Lane({youtube, overview, backdrop, toggleTrueFalse} ) {
   const youtubebackground = `https://www.youtube.com/watch?v=${youtube}`
   return (
     <>
@@ -18,13 +18,12 @@ function Lane({youtube, overview, backdrop} ) {
         light={backdrop}
         url={youtubebackground}
         playing={true}
-        loop={true} 
         controls={false}
-        width="900px"
-        muted
+        width="cover"
+        height="500px"
         playIcon={<button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>}
       />
-      <button className='add-button' ><AiOutlinePlus /></button>
+      <button onClick={toggleTrueFalse} className='add-button' ><AiOutlinePlus /></button>
       <button className='dislike-button' ><BiDislike /></button>
       <button className='like-button'><BiLike /></button>
       <p className="movie-overview">{overview}</p>

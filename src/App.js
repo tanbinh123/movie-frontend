@@ -5,6 +5,7 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 import './App.css';
 import Info from './components/info.js'
 import screenfull from 'screenfull'
+import Navigation from './components/navigation';
 
 require('dotenv').config()
 
@@ -45,7 +46,7 @@ function App() {
     }
   }
   async function fetchMoviesJSON() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/406?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/475557?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies = await response.json();
     return movies;
   }
@@ -53,18 +54,16 @@ function App() {
     setBgimage(response.backdrop_path)
     setOverview(response.overview);
   });
-
   async function fetchVideoJSON() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/406/videos?api_key=33ea3e5328d23c13d33ed05add4783b7&language=en-US');
+    const response = await fetch('https://api.themoviedb.org/3/movie/475557/videos?api_key=33ea3e5328d23c13d33ed05add4783b7&language=en-US');
     const movies = await response.json();
     return movies;
   }
   fetchVideoJSON().then(movie => {
     setYoutube(movie.results[1].key);
   });
-
   async function fetchLogoJSON() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/406?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/475557?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const movies = await response.json();
     return movies;
   }
@@ -73,10 +72,11 @@ function App() {
   });
   const toggleTrueFalse = () => {
     setOn(!on);
-    setHandlePause(!handlePause) };
-    
+    setHandlePause(!handlePause) 
+  };
   return (
     <div className="App">
+      <Navigation />
       <div className="react-player">
         <ReactPlayer
         ref={player}
@@ -87,20 +87,15 @@ function App() {
         width='cover'
         height="900px"
         muted
-        // light={backdrop}
-        // playIcon={<button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>}
-        // config={{ youtube: { playerVars: { modestbranding: 1 } } }}
       />
       </div>
       <img className="movie-logo" src={logo} alt="logo" />
-      {/* <p className="movie-overview">{overview}</p> */}
       <div className="buttons">
       <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
       <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
       </div>
-      <div>{on ? <Info  backdrop={backdrop} youtube={youtube} overview={overview}/> : null}</div>
+      <div>{on ? <Info toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview}/> : null}</div>
     </div>
-    
   );
 }
 export default App;

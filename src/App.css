@@ -1,8 +1,8 @@
 body{
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     color: #f3f3f3 !important;
     font-family: Helvetica;
-    height: 1200px;
+    /* height: 1200px; */
 }
 
 .app{
@@ -50,7 +50,7 @@ a:active {
     font-family: Helvetica;
     width: 100%;
     padding-top: 20px;
-    z-index: 10;
+    z-index: 1;
     font-size: 13px;
 }  
 /* .film-nav{
@@ -104,7 +104,7 @@ p{
     font-size: 20px;
 }
 .react-player{
-    height:1200px;
+    height:1000px;
 }
 .info-button{
     position: absolute;

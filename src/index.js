@@ -8,7 +8,7 @@ import App from './App';
 // import Lane4 from './components/lane4'
 // import Lane5 from './components/lane5'
 import Footer from './components/footer'
-import Navigation from './components/navigation';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Discover from './Pages/discover';
@@ -32,7 +32,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Container fluid>
       <Router>
-      <Navigation />
       <Switch>
       <Route path="/" exact component={App}/>
       <Route path="/discover" component={Discover}/>
