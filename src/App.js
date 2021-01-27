@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 import { VscTriangleRight } from 'react-icons/vsc';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
-import { AiOutlinePlus } from 'react-icons/ai';
-import { BiDislike } from 'react-icons/bi';
-import { BiLike } from 'react-icons/bi';
 import './App.css';
 import Info from './components/info.js'
+import screenfull from 'screenfull'
 
 require('dotenv').config()
 
@@ -28,15 +26,24 @@ async function Api() {
 Api();
 
 function App() {
+  
   const [on, setOn] = useState(false);
-  console.log(on)
+  console.log("on " + on)
   const [logo, setLogo] = useState("");
+  const [handlePause, setHandlePause] = useState(true);
+  console.log("handlePause " + handlePause)
   const [overview, setOverview] = useState("");
   const [youtube, setYoutube] = useState("");
   const [bgimage, setBgimage] = useState("");
   const backdrop = `https://image.tmdb.org/t/p/w1280/${bgimage}`
   const youtubebackground = `https://www.youtube.com/watch?v=${youtube}`
-
+  
+  const player = useRef(null);
+  const handleClickFullscreen = () => {
+    if (screenfull.isEnabled) {
+      screenfull.request(player.current.wrapper);
+    }
+  }
   async function fetchMoviesJSON() {
     const response = await fetch('https://api.themoviedb.org/3/movie/406?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies = await response.json();
@@ -64,33 +71,34 @@ function App() {
   fetchLogoJSON().then(result => {
     setLogo(result.hdmovielogo[0].url);
   });
-  const toggleTrueFalse = () => setOn(!on);
+  const toggleTrueFalse = () => {
+    setOn(!on);
+    setHandlePause(!handlePause) };
+    
   return (
     <div className="App">
       <div className="react-player">
         <ReactPlayer
+        ref={player}
         url={youtubebackground}
-        playing={true}
+        playing={handlePause}
         loop={true} 
         controls={true}
         width='cover'
         height="900px"
         muted
-        playIcon={<button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>}
-        light={backdrop}
-        config={{ youtube: { playerVars: { modestbranding: 1 } } }}
+        // light={backdrop}
+        // playIcon={<button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>}
+        // config={{ youtube: { playerVars: { modestbranding: 1 } } }}
       />
       </div>
       <img className="movie-logo" src={logo} alt="logo" />
-      <p className="movie-overview">{overview}</p>
+      {/* <p className="movie-overview">{overview}</p> */}
       <div className="buttons">
-      {/* <button className='play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button> */}
+      <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
       <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
-      <button className='add-button' ><AiOutlinePlus /></button>
-      <button className='dislike-button' ><BiDislike /></button>
-      <button className='like-button'><BiLike /></button>
       </div>
-      <div>{on ? <Info /> : null}</div>
+      <div>{on ? <Info  backdrop={backdrop} youtube={youtube} overview={overview}/> : null}</div>
     </div>
     
   );

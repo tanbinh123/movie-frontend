@@ -245,7 +245,7 @@ li {
         height:600px;
     }
 }
-@media (min-width: 768px) { 
+@media screen and (min-width: 768px) { 
     .footer-iconbox {
         font-size: 30px;
     } 
