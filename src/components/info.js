@@ -8,7 +8,7 @@ import { BiLike } from 'react-icons/bi';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 function Lane({ youtube, overview, backdrop, toggleTrueFalse }) {
-  
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => document.body.style.overflow = 'unset';
@@ -35,6 +35,17 @@ function Lane({ youtube, overview, backdrop, toggleTrueFalse }) {
             <button className='dislike-button' ><BiDislike /></button>
             <button className='like-button'><BiLike /></button>
             <p className="movie-overview">{overview}{overview}{overview}{overview}{overview}{overview}v{overview}</p>
+            <div className="infoDetails">
+              <div className="extraInfo">
+                <p style={{ color: "gray" }}>Genre: </p><p>....</p>
+              </div>
+              <div className="extraInfo">
+                <p style={{ color: "gray" }}>Naam regisseur: </p><p>  ....</p>
+              </div>
+              <div className="extraInfo">
+                <p style={{ color: "gray" }}>Duur:</p><p>....</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
