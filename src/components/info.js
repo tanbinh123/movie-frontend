@@ -36,7 +36,6 @@ function Info({ youtube, overview, backdrop, toggleTrueFalse }) {
             <button className='like-button'><BiLike /></button>
             <div className="infoMovie">
             <div className="movieExcerpt">
-            <div className="movieExcerpt">
             <p className="movie-overview">{overview}{overview}{overview}{overview}{overview}{overview}v{overview}</p>
             </div>
             <div className="infoDetails">
@@ -54,7 +53,7 @@ function Info({ youtube, overview, backdrop, toggleTrueFalse }) {
         </div>
       </div>
       </div>
-      </div>
+  
     </>
   );
 };
