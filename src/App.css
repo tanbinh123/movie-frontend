@@ -2,7 +2,9 @@ body{
     background-color: rgba(0, 0, 0, 0.5) !important;
     color: #f3f3f3 !important;
     font-family: Helvetica;
-    /* height: 1200px; */
+}
+.my-body-noscroll-class {
+    overflow: hidden;
 }
 .app{
     position: relative;

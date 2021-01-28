@@ -9,6 +9,8 @@ import Navigation from './components/navigation';
 
 require('dotenv').config()
 
+
+
 async function CreateRandomNumber() {
   const a = ['102', '201', '303', '401', '501', '602', '103', '204', '305', '406', '507', '608'];
   const randomNum = a[Math.floor(a.length * Math.random())];
@@ -45,6 +47,7 @@ function App() {
       screenfull.request(player.current.wrapper);
     }
   }
+  
   async function fetchMoviesJSON() {
     const response = await fetch('https://api.themoviedb.org/3/movie/475557?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies = await response.json();
@@ -72,7 +75,7 @@ function App() {
   });
   const toggleTrueFalse = () => {
     setOn(!on);
-    setHandlePause(!handlePause) 
+    setHandlePause(!handlePause);
   };
   return (
     <div className="App">

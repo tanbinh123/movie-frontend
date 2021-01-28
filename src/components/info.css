@@ -6,6 +6,7 @@
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.75); 
     z-index: 1;
+    overflow: scroll !important;
 }
 .popup{
     position: relative;
@@ -15,6 +16,7 @@
     border-radius: 5px;
     width: 900px;
     height: 900px;
+    
 }
 .reactplayer::before{
     position: relative;
@@ -29,9 +31,7 @@
     top: 25px;
     right: 25px;
     font-size: 40px;
-    color: white;
-    /* filter: invert(100%) ; */
-    
+    color: white;    
 }
 .info-play-button{
     position: absolute;
