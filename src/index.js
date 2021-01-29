@@ -2,13 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Lane1 from './components/lane1'
-// import Lane2 from './components/lane2'
-// import Lane3 from './components/lane3'
-// import Lane4 from './components/lane4'
-// import Lane5 from './components/lane5'
-import Footer from './components/footer'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Discover from './Pages/discover';
@@ -33,7 +26,7 @@ ReactDOM.render(
     <Container fluid>
       <Router>
       <Switch>
-      <Route path="/" exact component={App}/>
+      <Route path="/" exact component={App} />
       <Route path="/discover" component={Discover}/>
       <Route path="/film" component={Film}/>
       <Route path="/Audiodescriptie" component={Audiodescriptie}/>
@@ -50,12 +43,6 @@ ReactDOM.render(
       <Route path="/Vacatures" component={Vacatures}/>
       <Route path="/WettelijkeBepalingen" component={WettelijkeBepalingen}/>
       </Switch>
-      {/* <Lane1 />
-      <Lane2 />
-      <Lane3 /> */}
-      {/* <Lane4 /> */}
-      {/* <Lane5 /> */}
-      <Footer />
       </Router>
     </Container>
   </React.StrictMode>,

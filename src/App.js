@@ -6,18 +6,17 @@ import './App.css';
 import Info from './components/info.js'
 import screenfull from 'screenfull'
 import Navigation from './components/navigation';
+import Footer from './components/footer'
 
 require('dotenv').config()
 
-
-
-async function CreateRandomNumber() {
-  const a = ['102', '201', '303', '401', '501', '602', '103', '204', '305', '406', '507', '608'];
-  const randomNum = a[Math.floor(a.length * Math.random())];
-  console.log(randomNum)
-  return randomNum;
-}
-CreateRandomNumber();
+// async function CreateRandomNumber() {
+//   const a = ['102', '201', '303', '401', '501', '602', '103', '204', '305', '406', '507', '608'];
+//   const randomNum = a[Math.floor(a.length * Math.random())];
+//   console.log(randomNum)
+//   return randomNum;
+// }
+// CreateRandomNumber();
 
 async function Api() {
   const api = {
@@ -31,11 +30,10 @@ Api();
 function App() {
   
   const [on, setOn] = useState(false);
-  console.log("on " + on)
   const [logo, setLogo] = useState("");
   const [handlePause, setHandlePause] = useState(true);
-  console.log("handlePause " + handlePause)
   const [overview, setOverview] = useState("");
+  const [title, setTitle] = useState("")
   const [youtube, setYoutube] = useState("");
   const [bgimage, setBgimage] = useState("");
   const backdrop = `https://image.tmdb.org/t/p/w1280/${bgimage}`
@@ -47,15 +45,36 @@ function App() {
       screenfull.request(player.current.wrapper);
     }
   }
-  
+//   fetch('http://192.168.2.9:8080/movies/details')
+//   .then(response => response.json())
+//   .then(json => {
+//     console.log(json)
+// setBgimage(response.backdrop_path)
+// setOverview(response.overview);
+// setTitle(response.title)
+//   })
+// fetch('http://192.168.2.9:8080/movies/logo')
+//   .then(response => response.json())
+//   .then(json => {
+//     console.log(json)
+// setLogo(result.hdmovielogo[0].url);
+//   })
+//   fetch('http://192.168.2.9:8080/movies/trailer')
+//   .then(response => response.json())
+//   .then(json => {
+//     console.log(json)
+// setYoutube(movie.results[1].key);
+//   })
   async function fetchMoviesJSON() {
     const response = await fetch('https://api.themoviedb.org/3/movie/475557?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies = await response.json();
     return movies;
   }
   fetchMoviesJSON().then(response => {
+    // console.log(response.title)
     setBgimage(response.backdrop_path)
     setOverview(response.overview);
+    setTitle(response.title)
   });
   async function fetchVideoJSON() {
     const response = await fetch('https://api.themoviedb.org/3/movie/475557/videos?api_key=33ea3e5328d23c13d33ed05add4783b7&language=en-US');
@@ -82,6 +101,7 @@ function App() {
       <Navigation />
       <div className="react-player">
         <ReactPlayer
+        className="ReactPlayer"
         ref={player}
         url={youtubebackground}
         playing={handlePause}
@@ -97,7 +117,8 @@ function App() {
       <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
       <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
       </div>
-      <div>{on ? <Info toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview}/> : null}</div>
+      <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview}/> : null}</div>
+      <Footer />
     </div>
   );
 }

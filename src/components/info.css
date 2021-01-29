@@ -1,6 +1,6 @@
 .popup-container{
-    position: relative;
-    top: -900px;
+    position: absolute;
+    top: 0px;
     left: 0px;
     border-radius: 5px;
     width: 100vw;
@@ -11,11 +11,14 @@
 .popup{
     position: relative;
     top: 0;
-    left: 280px;
+    left: 0;
     background-color: rgb(19, 19, 19); 
-    border-radius: 5px;
-    width: 900px;
+    border-radius: 15px;
+    width: 380px;
     height: 900px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .reactplayer::before{
     position: relative;
@@ -31,6 +34,11 @@
     right: 25px;
     font-size: 40px;
     color: white;    
+}
+.info-movie-logo{
+    position: absolute;
+    top: 280px;
+    width:250px;
 }
 .info-play-button{
     position: absolute;
@@ -48,6 +56,9 @@
 .info-play-button:hover{
     background-color: rgba(255, 255, 255, 0.8);
 }
+.info-play-button:focus {
+    outline:0;
+}
 .info-play-button-icon{
     margin-right: 10px;
     font-size: 20px;
@@ -59,11 +70,18 @@
     width: 160px;
     left: 170px;
     border-radius: 50%;
+    border: none;
     width: 50px;
     height: 50px;
     color: white;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.4);
+}
+.add-button:hover{
+    background-color: rgba(83, 83, 83, 0.4);
+}
+.add-button:focus {
+    outline:0;
 }
 .like-button{
     position: absolute;
@@ -72,11 +90,32 @@
     width: 160px;
     left: 230px;
     border-radius: 50%;
+    border: none;
     width: 50px;
     height: 50px;
     color: white;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.4);
+}
+.green{
+    position: absolute;
+    top: 400px;
+    height: 50px;
+    width: 160px;
+    left: 230px;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: green;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.like-button:hover{
+    background-color: rgba(83, 83, 83, 0.4);
+}
+.like-button:focus {
+    outline:0;
 }
 .dislike-button{
     position: absolute;
@@ -85,11 +124,44 @@
     width: 160px;
     left: 290px;
     border-radius: 50%;
+    border: none;
     width: 50px;
     height: 50px;
     color: white;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.4);
+}
+.red{
+    position: absolute;
+    top: 400px;
+    height: 50px;
+    width: 160px;
+    left: 290px;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: red;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dislike-button:hover{
+    background-color: rgba(83, 83, 83, 0.4);
+}
+.dislike-button:focus {
+    outline:0;
+}
+.movie-title{
+    position: absolute;
+    top: 560px;
+    left: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 550px;
+    color: white;
+    font-size: 16px;
+    font-weight:900;
+    font-size: 20px;
 }
 .movie-overview{
     position: absolute;
@@ -103,8 +175,11 @@
 }
 .infoMovie {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 800px;
+}
+span{
+    color: white;
 }
 .movieExcerpt {
     width: 600px;
@@ -115,15 +190,46 @@
 }
 .infoDetails {
     width: 200px;
-    height: auto;
-    margin-left: 40px;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+    margin-top: 40px;
+    margin-left: 80px;
+}   
 .extraInfo {
-    width: 200px;
+    color: grey;
+    width: 400px;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin: 20px;
+} 
+@media screen and (min-width: 539px) {
+    .popup{
+        border-radius: 5px;
+        width: 600px;
+        height: 900px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+@media screen and (min-width: 768px) { 
+    .popup{
+        top: -100px;
+        left: 0;
+        width: 900px;
+        height: 900px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .popup{
+        top: 0;
+        left: 0;
+        width: 900px;
+        height: 900px;
+    }
+}
+@media screen and (min-width: 1200px) {
+
+    .popup{
+        top: 0;
+        left: 0;
+        width: 900px;
+        height: 900px;
+    }
 }
