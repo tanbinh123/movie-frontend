@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import '../styles/Lane.css';
 
 function Lane() {
 
@@ -36,7 +36,7 @@ function Lane() {
   const backdrop10 = `https://image.tmdb.org/t/p/w500/${logo10}`
 
   async function fetchMoviesJSON1() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/600?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/500?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies1 = await response.json();
     return movies1;
   }
@@ -44,7 +44,7 @@ function Lane() {
     setLogo1(response.backdrop_path)
   });
   async function fetchMoviesJSON2() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/601?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/501?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies2 = await response.json();
     return movies2;
   }
@@ -52,7 +52,7 @@ function Lane() {
     setLogo2(response.backdrop_path)
   });
   async function fetchMoviesJSON3() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/602?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/502?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies3 = await response.json();
     return movies3;
   }
@@ -60,7 +60,7 @@ function Lane() {
     setLogo3(response.backdrop_path)
   });
   async function fetchMoviesJSON4() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/603?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/503?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies4 = await response.json();
     return movies4;
   }
@@ -68,7 +68,7 @@ function Lane() {
     setLogo4(response.backdrop_path)
   });
   async function fetchMoviesJSON5() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/604?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/504?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies5 = await response.json();
     return movies5;
   }
@@ -76,7 +76,7 @@ function Lane() {
     setLogo5(response.backdrop_path)
   });
   async function fetchMoviesJSON6() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/605?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/505?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies6 = await response.json();
     return movies6;
   }
@@ -84,7 +84,7 @@ function Lane() {
     setLogo6(response.backdrop_path)
   });
   async function fetchMoviesJSON7() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/606?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/506?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies7 = await response.json();
     return movies7;
   }
@@ -92,7 +92,7 @@ function Lane() {
     setLogo7(response.backdrop_path)
   });
   async function fetchMoviesJSON8() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/607?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/507?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies8 = await response.json();
     return movies8;
   }
@@ -100,7 +100,7 @@ function Lane() {
     setLogo8(response.backdrop_path)
   });
   async function fetchMoviesJSON9() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/608?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/508?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies9 = await response.json();
     return movies9;
   }
@@ -108,7 +108,7 @@ function Lane() {
     setLogo9(response.backdrop_path)
   });
   async function fetchMoviesJSON10() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/609?api_key=33ea3e5328d23c13d33ed05add4783b7');
+    const response = await fetch('https://api.themoviedb.org/3/movie/509?api_key=33ea3e5328d23c13d33ed05add4783b7');
     const movies10 = await response.json();
     return movies10;
   }
@@ -117,7 +117,7 @@ function Lane() {
   });
 
   async function fetchLogoJSON1() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/600?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/500?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo1 = await response.json();
     return logo1;
   }
@@ -125,7 +125,7 @@ function Lane() {
     setBgLogo1(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON2() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/601?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/501?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo2 = await response.json();
     return logo2;
   }
@@ -133,7 +133,7 @@ function Lane() {
     setBgLogo2(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON3() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/602?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/502?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo3 = await response.json();
     return logo3;
   }
@@ -141,7 +141,7 @@ function Lane() {
     setBgLogo3(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON4() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/603?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/503?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo4 = await response.json();
     return logo4;
   }
@@ -149,7 +149,7 @@ function Lane() {
     setBgLogo4(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON5() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/604?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/504?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo5 = await response.json();
     return logo5;
   }
@@ -157,7 +157,7 @@ function Lane() {
     setBgLogo5(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON6() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/605?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/505?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo6 = await response.json();
     return logo6;
   }
@@ -165,7 +165,7 @@ function Lane() {
     setBgLogo6(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON7() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/606?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/506?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo7 = await response.json();
     return logo7;
   }
@@ -173,7 +173,7 @@ function Lane() {
     setBgLogo7(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON8() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/607?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/507?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo8 = await response.json();
     return logo8;
   }
@@ -181,7 +181,7 @@ function Lane() {
     setBgLogo8(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON9() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/608?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/508?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo9 = await response.json();
     return logo9;
   }
@@ -189,7 +189,7 @@ function Lane() {
     setBgLogo9(result.hdmovielogo[0].url);
   });
   async function fetchLogoJSON10() {
-    const response = await fetch('http://webservice.fanart.tv/v3/movies/609?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
+    const response = await fetch('http://webservice.fanart.tv/v3/movies/509?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c');
     const logo10 = await response.json();
     return logo10;
   }
@@ -199,7 +199,7 @@ function Lane() {
 
   return (
     <>
-      <h3>00’s movies</h3>
+      <h3>90’s movies</h3>
       <div>
         <ul className="cards-wrapper">
           <div className="parent">

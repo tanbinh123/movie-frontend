@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/Footer.css';
 import { AiOutlineYoutube } from 'react-icons/ai';
 import { AiOutlineFacebook } from 'react-icons/ai';
 import { AiOutlineInstagram } from 'react-icons/ai';

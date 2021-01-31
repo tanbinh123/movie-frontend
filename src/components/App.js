@@ -59,7 +59,6 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
       <Navigation />
       <div className="react-player" >
         <ReactPlayer
-          className="ReactPlayer"
           ref={player}
           url={youtubebackground}
           playing={handlePause}
@@ -71,7 +70,7 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
         />
       </div>
       <img className="movie-logo" src={logo} alt="logo" />
-      <div className="buttons">
+      <div>
         <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
         <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
       </div>

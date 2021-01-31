@@ -1,11 +1,8 @@
 body{
-    background-color: rgba(0, 0, 0, 0.5) !important;
     color: #f3f3f3 !important;
     font-family: Helvetica;
-}
-.app{
-    position: relative;
-    top:100px;
+    background-color: black !important;
+    color: white !important;
 }
 a { 
     color: inherit;
@@ -27,41 +24,22 @@ a:active {
     color: inherit;
     text-decoration: none;
 } 
-.movie-logo{
-    position: absolute;
-    top: 400px;
-    left:12px;
-    width:300px;
-}
-.navigation{
-    position: fixed !important;
-    font-family: Helvetica;
-    width: 100%;
-    padding-top: 20px;
-    z-index: 1;
-    font-size: 20px;
-}  
-.film-nav {
-    font-size: 20px;
-} 
-.logo{
-    height: 30px;
-}
-.Discover{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    font-size: 15px;
-    color: white;
+.app{
+    position: relative;
+    top:100px;
 }
 .react-player{
     position: relative;
     top: -57px;
     bottom: -57px;
     margin-bottom:10px;
+    height:1000px;
 }
-.Film{
-    padding-top: 100px;
-    padding-bottom: 100px;
+.movie-logo{
+    position: absolute;
+    top: 400px;
+    left:12px;
+    width:300px;
 }
 .play-button{
     position: absolute;
@@ -109,89 +87,14 @@ a:active {
     margin-right: 10px;
     font-size: 20px;
 }
-.react-player{
-    height:1000px;
-}
-.movietitle{
-    font-size: 100px;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    color: white;
-}
-body {
-    background-color: black !important;
-    color: white !important;
-}
-.link-container{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    }
-.navigation {
-    position: fixed !important;
-}
-.background {
-    width: 100%;
-}
-.header1 {
-    font-family: 'Helvetica', sans-serif;
-    font-size: medium;
-}
-.footer-box {
-    display: flex;
-    justify-content: center;
-    width: 600px;
-}
-li {
-    box-sizing: border-box;
-    margin-bottom: 16px;
-}
-.footer-links {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    font-size: 10px;
-    color: #808080;
-    margin:25px;
-} 
-.footer-iconbox {
-    display: flex;
-    margin-left: 10px;
-    font-size: 20px;
-    color: #808080;
-    margin:32px;
-} 
-.footer-iconbox svg{
-    margin-right: 5px;
-}
-.film-nav{
-    color: white !important;
-}
-.mr-auto{
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    /* margin-left: 200px; */
-    background-color: white !important;  
-}
 @media screen and (min-width: 539px) {
-    .footer-iconbox {
-        font-size: 20px;
-    } 
-    .footer-links {
-        font-size: 10px;
-    } 
-    .navigation{
-        font-size: 13px;
-    } 
+    .react-player{
+        height:600px;
+    }
     .movie-logo{
         top: 430px;
         left:0px;
         width:350px;
-    }
-    .movie-overview{
-        top: 200px;
     }
     .play-button{
         top: 600px;
@@ -199,94 +102,46 @@ li {
     .info-button{
         top: 600px;
     }
-    .react-player{
-        height:600px;
-    }
-    .ReactPlayer{
-        height:300px;
-    }
-    
 }
 @media screen and (min-width: 768px) { 
-    .footer-iconbox {
-        font-size: 30px;
-    } 
-    .footer-links {
-        font-size: 10px;
-    } 
-    .navigation{
-        font-size: 14px;
+    .react-player{
+        margin-bottom:300px;
     }
     .movie-logo{
         top: 430px;
         left: 8px;
         width:350px;
     }
-    .movie-overview{
-        top: 300px;
-    }
     .play-button{
         top: 600px;
     }
     .info-button{
         top: 600px;
     }
-    .react-player{
-        margin-bottom:300px;
-    }
 }
 @media screen and (min-width: 992px) {
-    .footer-iconbox {
-        font-size: 40px;
-    } 
-    .footer-links {
-        font-size: 14px;
-    } 
-    .navigation{
-        font-size: 15px;
+    .react-player{
+        margin-bottom:300px;
     }
     .movie-logo{
         top: 400px;
         left:0px;
         width:400px;
     }
-    .movie-overview{
-        top: 350px;
-    }
     .play-button{
         top: 600px;
     }
     .info-button{
         top: 600px;
     }
+}
+@media screen and (min-width: 1200px) {  
     .react-player{
         margin-bottom:300px;
-    }
-}
-@media screen and (min-width: 1200px) {
-    .footer-iconbox {
-        font-size: 40px;
-        margin:30px; 
-    }
-    .footer-links {
-        font-size: 16px;
-    }  
-    .navigation{
-        font-size: 16px;
     }
     .movie-logo{
         top: 360px;
         left:-12px;
         width:500px;
-    }
-    .movie-overview{
-        top: 430px;
-        left:-10px;
-    }
-    .ReactPlayer{
-        height:300px;
-    }
-    .react-player{
-        margin-bottom:300px;
     }
 }

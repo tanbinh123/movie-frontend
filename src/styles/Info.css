@@ -7,6 +7,19 @@
     background-color: rgba(0, 0, 0, 0.75); 
     overflow: scroll !important;
 }
+.popup{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(19, 19, 19); 
+    border-radius: 15px;
+    width: 380px;
+    height: 900px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    /* z-index: 100; */
+}
 .click-left{
     position: absolute;
     top: 0;
@@ -22,19 +35,6 @@
     height:800px;
     width: 250px;
     background-color: rgba(0, 0, 0, 0); 
-}
-.popup{
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: rgb(19, 19, 19); 
-    border-radius: 15px;
-    width: 380px;
-    height: 900px;
-    margin-top: 20px;
-    margin-left:auto;
-    margin-right:auto;
-    /* z-index: 100; */
 }
 .reactplayer::before{
     position: relative;
@@ -223,6 +223,9 @@ span{
         margin-left:auto;
         margin-right:auto;
     }
+    .movie-overview{
+        top: 200px;
+    }
 }
 @media screen and (min-width: 768px) { 
     .popup{
@@ -230,6 +233,9 @@ span{
         left: 0;
         width: 900px;
         height: 900px;
+    }
+    .movie-overview{
+        top: 300px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -239,14 +245,20 @@ span{
         width: 900px;
         height: 900px;
     }
+    .movie-overview{
+        top: 350px;
+    }
 }
 @media screen and (min-width: 1200px) {
-
     .popup{
         top: 0;
         left: 0;
         width: 900px;
         height: 900px;
+    }
+    .movie-overview{
+        top: 600px;
+        left:-10px;
     }
     .infoMovie {
         display: flex;

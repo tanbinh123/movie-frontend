@@ -43,3 +43,26 @@
   }
 
   
+  .container {
+    display: flex;
+    overflow: auto; 
+    padding: 0;
+  
+  }
+  
+  .item {
+    width: 300px;
+    /* flex: 0 0 19.7%; */
+    margin: 0 2px 0 0;
+    padding: 0;
+    transition: transform 100ms ease 100ms;
+  }
+  .container:hover .item {
+    transform: translateX(-10%);
+  }
+  .item:hover ~ .item {
+    transform: translateX(10%);
+  }
+  .item:hover {
+    transform: scale(1.1) !important;
+  }
