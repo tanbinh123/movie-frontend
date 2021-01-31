@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import '../styles/Lane.css';
 
-function Lane() {
+function Lane80() {
 
   const [logo1, setLogo1] = useState("");
   const [logo2, setLogo2] = useState("");
@@ -247,4 +247,4 @@ function Lane() {
     </>
   );
 };
-export default Lane;
+export default Lane80;

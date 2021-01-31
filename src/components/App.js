@@ -3,18 +3,11 @@ import ReactPlayer from 'react-player'
 import { VscTriangleRight } from 'react-icons/vsc';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import '../styles/App.css';
-import Info from './Info.js'
 import screenfull from 'screenfull'
 import Navigation from './Navigation';
+import Info from './Info.js'
+import Lane80 from './Lane80.js'
 import Footer from './Footer'
-
-// async function CreateRandomNumber() {
-//   const a = ['102', '201', '303', '401', '501', '602', '103', '204', '305', '406', '507', '608'];
-//   const randomNum = a[Math.floor(a.length * Math.random())];
-//   console.log(randomNum)
-//   return randomNum;
-// }
-// CreateRandomNumber();
 
 function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
   const [muted, setMuted] = useState(true);
@@ -40,16 +33,6 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
     };
 }, []);
 
-// const Escape = () => {
-//       const handleEsc = () => {
-//           setMuted(true);
-//       };
-//       window.addEventListener('keydown', handleEsc);
-//       return () => {
-//           window.removeEventListener('keydown', handleEsc);
-//       };
-//     }
-  
   const toggleTrueFalse = () => {
     setOn(!on);
     setHandlePause(!handlePause);
@@ -75,6 +58,7 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
         <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
+      <Lane80 />
       <Footer />
     </div>
   );

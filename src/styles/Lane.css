@@ -2,6 +2,9 @@
   overflow: auto;
   display: flex;
 }
+.cards-wrapper::-webkit-scrollbar {
+    display: none;
+  }
 .parent{
   position: relative;
     top: 0;
@@ -17,52 +20,47 @@
     padding: 0;
     transition: transform 100ms ease-in 100ms;
     opacity: 0.6;
-  }
-  .logoimg {
+}
+.logoimg {
     position: absolute;
     top: 75px;
     left:33px;
     width: 200px;
     opacity: 0.6;
-  }
-  .cards-wrapper:hover .laneimg .logoimg {
+}
+.cards-wrapper:hover .laneimg .logoimg {
     transform: translateX(-15%);
-  }
-  .laneimg:hover ~ .laneimg .logoimg {
+}
+.laneimg:hover ~ .laneimg .logoimg {
     transform: translateX(15%);
-  }
-  .logoimg:hover{
+}
+.logoimg:hover{
     opacity: 1;
-  }
-   .laneimg:hover ~ .logoimg {
+}
+.laneimg:hover ~ .logoimg {
     opacity: 1;
-  }
-
-  .parent:hover {
+}
+.parent:hover {
     transform: scale(1.1) !important;
-  }
-
-  
-  .container {
+}
+.container {
     display: flex;
     overflow: auto; 
     padding: 0;
-  
-  }
-  
-  .item {
+}
+.item {
     width: 300px;
     /* flex: 0 0 19.7%; */
     margin: 0 2px 0 0;
     padding: 0;
     transition: transform 100ms ease 100ms;
-  }
-  .container:hover .item {
+}
+.container:hover .item {
     transform: translateX(-10%);
-  }
-  .item:hover ~ .item {
+}
+.item:hover ~ .item {
     transform: translateX(10%);
-  }
-  .item:hover {
+}
+.item:hover {
     transform: scale(1.1) !important;
-  }
+}
