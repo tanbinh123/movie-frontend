@@ -30,6 +30,7 @@ a:active {
 .movie-logo{
     position: absolute;
     top: 400px;
+    left:12px;
     width:300px;
 }
 .navigation{
@@ -38,8 +39,11 @@ a:active {
     width: 100%;
     padding-top: 20px;
     z-index: 1;
-    font-size: 13px;
-}   
+    font-size: 20px;
+}  
+.film-nav {
+    font-size: 20px;
+} 
 .logo{
     height: 30px;
 }
@@ -149,12 +153,14 @@ li {
     list-style: none;
     font-size: 10px;
     color: #808080;
+    margin:25px;
 } 
 .footer-iconbox {
     display: flex;
     margin-left: 10px;
     font-size: 20px;
     color: #808080;
+    margin:32px;
 } 
 .footer-iconbox svg{
     margin-right: 5px;
@@ -181,6 +187,7 @@ li {
     } 
     .movie-logo{
         top: 430px;
+        left:0px;
         width:350px;
     }
     .movie-overview{
@@ -212,6 +219,7 @@ li {
     }
     .movie-logo{
         top: 430px;
+        left: 8px;
         width:350px;
     }
     .movie-overview{
@@ -239,6 +247,7 @@ li {
     }
     .movie-logo{
         top: 400px;
+        left:0px;
         width:400px;
     }
     .movie-overview{
@@ -257,6 +266,7 @@ li {
 @media screen and (min-width: 1200px) {
     .footer-iconbox {
         font-size: 40px;
+        margin:30px; 
     }
     .footer-links {
         font-size: 16px;
@@ -266,10 +276,12 @@ li {
     }
     .movie-logo{
         top: 360px;
+        left:-12px;
         width:500px;
     }
     .movie-overview{
         top: 430px;
+        left:-10px;
     }
     .ReactPlayer{
         height:300px;

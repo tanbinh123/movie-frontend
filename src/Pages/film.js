@@ -1,5 +1,5 @@
-import '../App.css';
-import Navigation from '../components/navigation';
+import '../styles/App.css';
+import Navigation from '../components/Navigation';
 
 function Film() {
     return (

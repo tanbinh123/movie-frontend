@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./lane.css";
+
 
 function Lane() {
 

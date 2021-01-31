@@ -1,24 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './styles/Index.css';
+import Api from './components/Api';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
-import Discover from './Pages/discover';
-import Film from './Pages/film';
-import Audiodescriptie from './Pages/Audiodescriptie';
-import AudioOndertiteling from './Pages/AudioOndertiteling';
-import Bedrijfsgegevens from './Pages/Bedrijfsgegevens';
-import Beleggersrelaties from './Pages/Beleggersrelaties';
-import Cadeaubonnen from './Pages/Cadeaubonnen';
-import Contact from './Pages/Contact';
-import Cookievoorkeuren from './Pages/Cookievoorkeuren';
-import Gebruiksvoorwaarden from './Pages/Gebruiksvoorwaarden';
-import Helpcenter from './Pages/Helpcenter';
-import Mediacenter from './Pages/Mediacenter';
-import Privacy from './Pages/Privacy';
-import Vacatures from './Pages/Vacatures';
-import WettelijkeBepalingen from './Pages/WettelijkeBepalingen';
+import Discover from './pages/Discover';
+import Film from './pages/Film';
+import Audiodescriptie from './pages/Audiodescriptie';
+import AudioOndertiteling from './pages/AudioOndertiteling';
+import Bedrijfsgegevens from './pages/Bedrijfsgegevens';
+import Beleggersrelaties from './pages/Beleggersrelaties';
+import Cadeaubonnen from './pages/Cadeaubonnen';
+import Contact from './pages/Contact';
+import Cookievoorkeuren from './pages/Cookievoorkeuren';
+import Gebruiksvoorwaarden from './pages/Gebruiksvoorwaarden';
+import Helpcenter from './pages/Helpcenter';
+import Mediacenter from './pages/Mediacenter';
+import Privacy from './pages/Privacy';
+import Vacatures from './pages/Vacatures';
+import WettelijkeBepalingen from './pages/WettelijkeBepalingen';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 ReactDOM.render(
@@ -26,7 +26,7 @@ ReactDOM.render(
     <Container fluid>
       <Router>
       <Switch>
-      <Route path="/" exact component={App} />
+      <Route path="/" exact component={Api} />
       <Route path="/discover" component={Discover}/>
       <Route path="/film" component={Film}/>
       <Route path="/Audiodescriptie" component={Audiodescriptie}/>

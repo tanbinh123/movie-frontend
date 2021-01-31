@@ -1,5 +1,4 @@
-import '../App.css';
-
+import '../styles/App.css';
 
 function Vacatures() {
   return (
