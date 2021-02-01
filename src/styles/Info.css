@@ -6,6 +6,7 @@
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.75); 
     overflow: scroll !important;
+    z-index: 1;
 }
 .popup{
     position: relative;
@@ -175,9 +176,7 @@
 .movie-title{
     position: absolute;
     top: 560px;
-    left: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
     max-width: 550px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
@@ -187,10 +186,8 @@
 .movie-overview{
     position: absolute;
     top: 600px;
-    left: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 550px;
+    margin-left: 30px;
+    max-width: 450px;
     color: white;
     font-size: 16px;
 }
@@ -262,7 +259,6 @@ span{
     }
     .movie-overview{
         top: 600px;
-        left:-10px;
     }
     .infoMovie {
         display: flex;

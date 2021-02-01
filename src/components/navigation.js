@@ -38,11 +38,8 @@ export default class App extends React.Component {
 
       <Navbar className="navigation"
         style={{
-          transition: "all 0.4s ease",
           backgroundColor:
-            this.state.status === "top" ? "transparent" : "black",
-          position: "fixed",
-
+            this.state.status === "top" ? "transparent" : "black"
         }} expand="lg">
         <Navbar.Brand href="#home"><img src={Logo} alt='img' className='logo' /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-auto" />

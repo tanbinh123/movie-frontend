@@ -4,7 +4,7 @@
     width: 100%;
     padding-top: 20px;
     z-index: 1;
-    font-size: 20px;
+    transition: all 0.4s ease;
 }  
 .logo{
     height: 30px;
@@ -17,21 +17,19 @@
     background-color: white !important;  
 }
 .film-nav{
-    color: white !important;
+    color: black !important;
 }
-
-p {
+.navigation p {
     position: relative;
     display: inline-block;
     font-size: 1rem;
     background: #fff;
     background-clip: text;
-  }
-  
-  span {
+}
+.navigation span {
     position: relative;
-  }
-  span:before {
+}
+.navigation span:before {
     content: "";
     position: absolute;
     left: 0;
@@ -40,10 +38,10 @@ p {
     background: #fff;
     bottom: 0px;
     transition: all 0.5s ease-out;
-  }
-  span:hover:before {
+}
+.navigation span:hover:before {
       transform: scaleY(0)
-  }
+}
 @media screen and (min-width: 539px) {
     .navigation{
         font-size: 13px;
