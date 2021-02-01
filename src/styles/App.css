@@ -35,16 +35,19 @@ a:active {
     margin-bottom:10px;
     height:1000px;
 }
+.movie-logo-container{
+    display: flex;
+    margin-left: 30px;
+}
 .movie-logo{
     position: absolute;
     top: 400px;
-    left:12px;
     width:300px;
 }
 .play-button{
     position: absolute;
     top: 550px;
-    left: 55px;
+    /* left: 55px; */
     height: 50px;
     width: 120px;
     padding-top:5px ;
@@ -91,57 +94,19 @@ a:active {
     .react-player{
         height:600px;
     }
-    .movie-logo{
-        top: 430px;
-        left:0px;
-        width:350px;
-    }
-    .play-button{
-        top: 600px;
-    }
-    .info-button{
-        top: 600px;
-    }
 }
 @media screen and (min-width: 768px) { 
     .react-player{
         margin-bottom:300px;
-    }
-    .movie-logo{
-        top: 430px;
-        left: 8px;
-        width:350px;
-    }
-    .play-button{
-        top: 600px;
-    }
-    .info-button{
-        top: 600px;
     }
 }
 @media screen and (min-width: 992px) {
     .react-player{
         margin-bottom:300px;
     }
-    .movie-logo{
-        top: 400px;
-        left:0px;
-        width:400px;
-    }
-    .play-button{
-        top: 600px;
-    }
-    .info-button{
-        top: 600px;
-    }
 }
 @media screen and (min-width: 1200px) {  
     .react-player{
         margin-bottom:300px;
-    }
-    .movie-logo{
-        top: 360px;
-        left:-12px;
-        width:500px;
     }
 }

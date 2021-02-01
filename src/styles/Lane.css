@@ -18,7 +18,7 @@
     margin: 0 10px;
     flex: 0 0 19.7%;
     padding: 0;
-    transition: transform 100ms ease-in 100ms;
+    transition: linear 100ms;
     opacity: 0.6;
 }
 .logoimg {

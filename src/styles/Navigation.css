@@ -19,6 +19,31 @@
 .film-nav{
     color: white !important;
 }
+
+p {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    background: #fff;
+    background-clip: text;
+  }
+  
+  span {
+    position: relative;
+  }
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #fff;
+    bottom: 0px;
+    transition: all 0.5s ease-out;
+  }
+  span:hover:before {
+      transform: scaleY(0)
+  }
 @media screen and (min-width: 539px) {
     .navigation{
         font-size: 13px;

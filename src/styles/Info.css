@@ -51,6 +51,10 @@
     font-size: 40px;
     color: white;    
 }
+.movie-logo-container{
+    display: flex;
+    margin-left: 30px;
+}   
 .info-movie-logo{
     position: absolute;
     top: 280px;

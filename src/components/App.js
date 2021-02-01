@@ -52,10 +52,12 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
           muted={muted}
         />
       </div>
+      <div className="movie-logo-container">
       <img className="movie-logo" src={logo} alt="logo" />
       <div>
         <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
         <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
+      </div>
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
       <Lane80 />

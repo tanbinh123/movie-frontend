@@ -40,7 +40,6 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
         <div className="click-right" onClick={toggleTrueFalse} />
           <div className="reactplayer">
             <ReactPlayer
-            className="ReactPlayer"
               ref={player}
               light={wait}
               url={youtubebackground}
@@ -54,11 +53,13 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
               mute
             />
             <AiOutlineCloseCircle onClick={toggleTrueFalse} className='close-button' />
+            <div className="movie-logo-container">
             <img className="info-movie-logo" src={logo} alt="logo" />
             <button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
             <button className='add-button' ><AiOutlinePlus /></button>
             <button onClick={() => setBgColorLike((bgColorLike) => !bgColorLike)} className={`like-button ${bgColorLike ? "green": ""}`}><BiLike /></button>
             <button onClick={() => setBgColorDisLike((bgColorDisLike) => !bgColorDisLike)} className={`dislike-button ${bgColorDisLike ? "red" : ""}`}><BiDislike /></button>
+            </div>
             <div className="infoMovie">
               <div className="movieExcerpt">
                 <p className="movie-title">Over {title} </p>
