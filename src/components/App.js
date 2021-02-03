@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 import { VscTriangleRight } from 'react-icons/vsc';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
@@ -7,6 +7,10 @@ import screenfull from 'screenfull'
 import Navigation from './Navigation';
 import Info from './Info.js'
 import Lane80 from './Lane80.js'
+import Lane90 from './Lane90.js'
+import Lane00 from './Lane00.js'
+import LaneDisney from './LaneDisney.js'
+import LaneActor from './LaneActor.js'
 import Footer from './Footer'
 
 function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
@@ -20,18 +24,22 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
       setMuted(false);
       screenfull.request(player.current.wrapper);
     }
+    else if (!screenfull.isEnabled) {
+      setMuted(true);
+      screenfull.request(player.current.wrapper);
+    }
   }
 
-  useEffect(() => {
-    const handleEsc = (event) => {
-        if (event.keyCode === 27) 
-        setMuted(true);
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => {
-    window.removeEventListener('keydown', handleEsc);
-    };
-}, []);
+//   useEffect(() => {
+//     const handleEsc = (event) => {
+//         if (event.keyCode === 27) 
+//         setMuted(true);
+//     };
+//     window.addEventListener('keydown', handleEsc);
+//     return () => {
+//     window.removeEventListener('keydown', handleEsc);
+//     };
+// }, []);
 
   const toggleTrueFalse = () => {
     setOn(!on);
@@ -60,7 +68,11 @@ function App({backdrop, overview, title, youtubebackground, logo, youtube}) {
       </div>
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
-      <Lane80 />
+     <Lane80 /> 
+      <Lane90 />
+      <Lane00 /> 
+      <LaneDisney />
+      <LaneActor />
       <Footer />
     </div>
   );

@@ -40,7 +40,7 @@ export default class App extends React.Component {
         style={{
           backgroundColor:
             this.state.status === "top" ? "transparent" : "black"
-        }} expand="lg">
+        }} expand="lg ">
         <Navbar.Brand href="#home"><img src={Logo} alt='img' className='logo' /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-auto" />
         <Navbar.Collapse id="basic-navbar-nav">

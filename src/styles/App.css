@@ -1,112 +1,135 @@
-body{
-    color: #f3f3f3 !important;
-    font-family: Helvetica;
-    background-color: black !important;
-    color: white !important;
+body {
+  color: #f3f3f3 !important;
+  font-family: Helvetica;
+  background-color: black !important;
+  color: #f3f3f3 !important;
 }
-a { 
-    color: inherit;
-    text-decoration: none;
-} 
-a:visited { 
-    color: inherit;
-    text-decoration: none;
-} 
-a:link { 
-    color: inherit;
-    text-decoration: none;
-} 
-a:hover { 
-    color: inherit;
-    text-decoration: none;
-} 
-a:active { 
-    color: inherit;
-    text-decoration: none;
-} 
-.app{
-    position: relative;
-    top:100px;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.react-player{
-    position: relative;
-    top: -57px;
-    bottom: -57px;
-    margin-bottom:10px;
-    height:1000px;
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
 }
-.movie-logo-container{
-    display: flex;
-    margin-left: 30px;
+
+a:link {
+  color: inherit;
+  text-decoration: none;
 }
-.movie-logo{
-    position: absolute;
-    top: 400px;
-    width:300px;
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
 }
-.play-button{
-    position: absolute;
-    top: 550px;
-    /* left: 55px; */
-    height: 50px;
-    width: 120px;
-    padding-top:5px ;
-    padding-bottom:5px ;
-    border-radius: 5px;
-    color:black;
-    background-color: rgba(255, 255, 255, 1);
-    border: none;
+
+a:active {
+  color: inherit;
+  text-decoration: none;
 }
-.play-button:hover{
-    background-color: rgba(255, 255, 255, 0.8);
+
+.app {
+  position: relative;
+  top: 100px;
 }
-.play-button:focus {
-    outline:0;
+
+.react-player {
+  position: relative;
+  top: -57px;
+  bottom: -57px;
+  margin-bottom: 10px;
+  height: 1000px;
 }
-.play-button-icon{
-    margin-right: 10px;
-    font-size: 20px;
+
+.movie-logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
 }
-.info-button{
-    position: absolute;
-    top: 550px;
-    height: 50px;
-    width: 160px;
-    left: 180px;
-    padding-top:5px ;
-    padding-bottom:5px ;
-    border-radius: 5px;
-    color:white;
-    background-color: rgba(128, 128, 128, 0.7);
-    border: none;
+
+.movie-logo-container .movie-logo {
+  position: absolute;
+  top: 400px;
+  width: 300px;
 }
-.info-button:hover{
-    background-color: rgba(128, 128, 128, 0.5)
+
+.movie-logo-container .play-button {
+  position: absolute;
+  top: 550px;
+  height: 50px;
+  width: 120px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  border: none;
 }
-.info-button:focus {
-    outline:0;
+
+.movie-logo-container .play-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
-.info-button-icon{
-    margin-right: 10px;
-    font-size: 20px;
+
+.movie-logo-container .play-button:focus {
+  outline: 0;
 }
+
+.movie-logo-container .play-button .play-button-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.movie-logo-container .info-button {
+  position: absolute;
+  top: 550px;
+  height: 50px;
+  width: 120px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  left: 180px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+  border: none;
+}
+
+.movie-logo-container .info-button:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.movie-logo-container .info-button:focus {
+  outline: 0;
+}
+
+.movie-logo-container .info-button .info-button-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 539px) {
-    .react-player{
-        height:600px;
-    }
+  .react-player {
+    height: 600px;
+  }
 }
-@media screen and (min-width: 768px) { 
-    .react-player{
-        margin-bottom:300px;
-    }
+
+@media screen and (min-width: 768px) {
+  .react-player {
+    margin-bottom: 300px;
+  }
 }
+
 @media screen and (min-width: 992px) {
-    .react-player{
-        margin-bottom:300px;
-    }
+  .react-player {
+    margin-bottom: 300px;
+  }
 }
-@media screen and (min-width: 1200px) {  
-    .react-player{
-        margin-bottom:300px;
-    }
+
+@media screen and (min-width: 1200px) {
+  .react-player {
+    margin-bottom: 300px;
+  }
 }
+/*# sourceMappingURL=App.css.map */

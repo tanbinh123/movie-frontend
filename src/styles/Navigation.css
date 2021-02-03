@@ -17,7 +17,7 @@
     background-color: white !important;  
 }
 .film-nav{
-    color: black !important;
+    color: white !important;
 }
 .navigation p {
     position: relative;
@@ -25,6 +25,10 @@
     font-size: 1rem;
     background: #fff;
     background-clip: text;
+    opacity: 0.8;
+}
+.navigation p:hover {
+    opacity: 1;
 }
 .navigation span {
     position: relative;
@@ -34,13 +38,17 @@
     position: absolute;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 0px;
     background: #fff;
     bottom: 0px;
-    transition: all 0.5s ease-out;
+    transform: scaleY(0); 
+    transform-origin: top;   
+    transition: all .2s ease-in;
 }
 .navigation span:hover:before {
-      transform: scaleY(0)
+      transform: scaleY(1);
+      height: 1px;
+      /* transition: height 0.2s ease-in; */
 }
 @media screen and (min-width: 539px) {
     .navigation{

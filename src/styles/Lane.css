@@ -64,3 +64,17 @@
 .item:hover {
     transform: scale(1.1) !important;
 }
+.parent .popup {
+    display: none;
+  }
+.parent:hover .popup {
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+  .red{
+      color: red;
+  }
+  .green{
+    color: green;
+}

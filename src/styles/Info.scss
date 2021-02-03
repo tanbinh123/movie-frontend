@@ -1,0 +1,245 @@
+@mixin positionAbsolute{
+    position: absolute;
+    top: 0px;
+}
+@mixin positionButtons{
+    position: absolute;
+    top: 400px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+@mixin transparentBox{
+    height:800px;
+    width: 250px;
+    background-color: $transparant;
+}
+@mixin excerpt{
+    position: absolute;
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+$primaryClr : white;
+$secondaryClr : black; 
+$infoClr:grey;
+$likeClr: green;
+$dislikeClr:red;
+$popupClr :rgb(19, 19, 19); 
+$transparant: rgba(0, 0, 0, 0); 
+
+.popup-container{
+    @include positionAbsolute();
+    left: 0px;
+    border-radius: 5px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75); 
+    overflow: scroll !important;
+    z-index: 1;
+}
+.popup{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: $popupClr; 
+    border-radius: 15px;
+    width: 380px;
+    height: 900px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    /* z-index: 100; */
+    .click-left{
+        @include positionAbsolute();
+        @include transparentBox();
+        left: -250px;
+    }
+    .click-right{
+        @include positionAbsolute();
+        @include transparentBox();
+        right: -250px;
+    }
+    .reactplayer::before{
+        position: relative;
+        top: -10px;
+        content: "";
+        width: cover;
+        border-radius: 5px;
+        margin-top:10px;  
+    }
+    .close-button{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 40px;
+        color: $primaryClr;    
+    }
+    .movie-logo-container{
+        display: flex;
+        margin-left: 30px;
+        .info-movie-logo{
+            position: absolute;
+            top: 280px;
+            width:250px;
+        }
+        .info-play-button{
+            position: absolute;
+            top: 400px;
+            left: 35px;
+            height: 50px;
+            width: 120px;
+            padding-top:5px ;
+            padding-bottom:5px ;
+            border-radius: 5px;
+            color:$secondaryClr;
+            background-color: rgba(255, 255, 255, 1);
+            border: none;
+            z-index: 10;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            &:focus {
+                outline:0;
+            }
+        }
+        .info-play-button-icon{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .add-button{
+            @include positionButtons();
+            left: 170px;
+            color: $primaryClr;
+            &:hover{
+                background-color: rgba(83, 83, 83, 0.4);
+            }
+            &:focus {
+                outline:0;
+            }
+        }
+        .like-button{
+            @include positionButtons();
+            left: 230px;
+            color: $primaryClr;
+            &:hover{
+                background-color: rgba(83, 83, 83, 0.4);
+            }
+            &:focus {
+                outline:0;
+            }
+        }
+        .green{
+            @include positionButtons();
+            left: 230px;
+            color: $likeClr;
+        }
+        .dislike-button{
+            @include positionButtons();
+            left: 290px;
+            color: $primaryClr;
+            &:hover{
+                background-color: rgba(83, 83, 83, 0.4);
+            }
+            &:focus {
+                outline:0;
+            }
+        }
+        .red{
+            @include positionButtons();
+            left: 290px;
+            color: $dislikeClr;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    } 
+    .movieExcerpt {
+        width: 600px;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 100px;
+        .movie-title{
+            @include excerpt();
+            top: 560px;
+            max-width: 550px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight:900;
+        }
+        .movie-overview{
+            @include excerpt();
+            top: 600px;
+            max-width: 450px;
+            color: $primaryClr;
+        }
+    }
+}
+.infoDetails {
+    width: 200px;
+    margin-top: 230px;
+    margin-left: -88px;
+    .extraInfo {
+        color: $infoClr;
+        width: 400px;
+        height: auto;
+        margin: 20px;
+    } 
+    span{
+        color: $primaryClr;
+    }
+}   
+@media screen and (min-width: 539px) {
+    .popup{
+        border-radius: 5px;
+        width: 600px;
+        height: 900px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .movie-overview{
+        top: 200px;
+    }
+}
+@media screen and (min-width: 768px) { 
+    .popup{
+        top: -100px;
+        left: 0;
+        width: 900px;
+        height: 900px;
+    }
+    .movie-overview{
+        top: 300px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .popup{
+        top: 0;
+        left: 0;
+        width: 900px;
+        height: 900px;
+    }
+    .movie-overview{
+        top: 350px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .popup{
+        top: 0;
+        left: 0;
+        width: 900px;
+        height: 900px;
+    }
+    .movie-overview{
+        top: 600px;
+    }
+    .infoMovie {
+        display: flex;
+        width: 200px;
+    }
+    .infoDetails {
+        width: 200px;
+        margin-top: 40px;
+        margin-left: 510px;
+    }   
+}

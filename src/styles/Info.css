@@ -1,272 +1,299 @@
-.popup-container{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-radius: 5px;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.75); 
-    overflow: scroll !important;
-    z-index: 1;
+.popup-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 5px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: scroll !important;
+  z-index: 1;
 }
-.popup{
-    position: relative;
+
+.popup {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #131313;
+  border-radius: 15px;
+  width: 380px;
+  height: 900px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* z-index: 100; */
+}
+
+.popup .click-left {
+  position: absolute;
+  top: 0px;
+  height: 800px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0);
+  left: -250px;
+}
+
+.popup .click-right {
+  position: absolute;
+  top: 0px;
+  height: 800px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0);
+  right: -250px;
+}
+
+.popup .reactplayer::before {
+  position: relative;
+  top: -10px;
+  content: "";
+  width: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.popup .close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 40px;
+  color: white;
+}
+
+.popup .movie-logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+}
+
+.popup .movie-logo-container .info-movie-logo {
+  position: absolute;
+  top: 280px;
+  width: 250px;
+}
+
+.popup .movie-logo-container .info-play-button {
+  position: absolute;
+  top: 400px;
+  left: 35px;
+  height: 50px;
+  width: 120px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  border: none;
+  z-index: 10;
+}
+
+.popup .movie-logo-container .info-play-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.popup .movie-logo-container .info-play-button:focus {
+  outline: 0;
+}
+
+.popup .movie-logo-container .info-play-button-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.popup .movie-logo-container .add-button {
+  position: absolute;
+  top: 400px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 170px;
+  color: white;
+}
+
+.popup .movie-logo-container .add-button:hover {
+  background-color: rgba(83, 83, 83, 0.4);
+}
+
+.popup .movie-logo-container .add-button:focus {
+  outline: 0;
+}
+
+.popup .movie-logo-container .like-button {
+  position: absolute;
+  top: 400px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 230px;
+  color: white;
+}
+
+.popup .movie-logo-container .like-button:hover {
+  background-color: rgba(83, 83, 83, 0.4);
+}
+
+.popup .movie-logo-container .like-button:focus {
+  outline: 0;
+}
+
+.popup .movie-logo-container .green {
+  position: absolute;
+  top: 400px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 230px;
+  color: green;
+}
+
+.popup .movie-logo-container .dislike-button {
+  position: absolute;
+  top: 400px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 290px;
+  color: white;
+}
+
+.popup .movie-logo-container .dislike-button:hover {
+  background-color: rgba(83, 83, 83, 0.4);
+}
+
+.popup .movie-logo-container .dislike-button:focus {
+  outline: 0;
+}
+
+.popup .movie-logo-container .red {
+  position: absolute;
+  top: 400px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 290px;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup .movieExcerpt {
+  width: 600px;
+  height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 100px;
+}
+
+.popup .movieExcerpt .movie-title {
+  position: absolute;
+  margin-left: 30px;
+  font-size: 16px;
+  top: 560px;
+  max-width: 550px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 900;
+}
+
+.popup .movieExcerpt .movie-overview {
+  position: absolute;
+  margin-left: 30px;
+  font-size: 16px;
+  top: 600px;
+  max-width: 450px;
+  color: white;
+}
+
+.infoDetails {
+  width: 200px;
+  margin-top: 230px;
+  margin-left: -88px;
+}
+
+.infoDetails .extraInfo {
+  color: grey;
+  width: 400px;
+  height: auto;
+  margin: 20px;
+}
+
+.infoDetails span {
+  color: white;
+}
+
+@media screen and (min-width: 539px) {
+  .popup {
+    border-radius: 5px;
+    width: 600px;
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .movie-overview {
+    top: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .popup {
+    top: -100px;
+    left: 0;
+    width: 900px;
+    height: 900px;
+  }
+  .movie-overview {
+    top: 300px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .popup {
     top: 0;
     left: 0;
-    background-color: rgb(19, 19, 19); 
-    border-radius: 15px;
-    width: 380px;
+    width: 900px;
     height: 900px;
-    margin-top: 20px;
-    margin-left:auto;
-    margin-right:auto;
-    /* z-index: 100; */
+  }
+  .movie-overview {
+    top: 350px;
+  }
 }
-.click-left{
-    position: absolute;
-    top: 0;
-    left: -250px;
-    height:800px;
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0); 
-}
-.click-right{
-    position: absolute;
-    top: 0;
-    right: -250px;
-    height:800px;
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0); 
-}
-.reactplayer::before{
-    position: relative;
-    top: -10px;
-    content: "";
-    width: cover;
-    border-radius: 5px;
-    margin-top:10px; 
-}
-.close-button{
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    font-size: 40px;
-    color: white;    
-}
-.movie-logo-container{
-    display: flex;
-    margin-left: 30px;
-}   
-.info-movie-logo{
-    position: absolute;
-    top: 280px;
-    width:250px;
-}
-.info-play-button{
-    position: absolute;
-    top: 400px;
-    left: 35px;
-    height: 50px;
-    width: 120px;
-    padding-top:5px ;
-    padding-bottom:5px ;
-    border-radius: 5px;
-    color:black;
-    background-color: rgba(255, 255, 255, 1);
-    border: none;
-    z-index: 10;
-}
-.info-play-button:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.info-play-button:focus {
-    outline:0;
-}
-.info-play-button-icon{
-    margin-right: 10px;
-    font-size: 20px;
-}
-.add-button{
-    position: absolute;
-    top: 400px;
-    height: 50px;
-    width: 160px;
-    left: 170px;
-    border-radius: 50%;
-    border: none;
-    width: 50px;
-    height: 50px;
-    color: white;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.add-button:hover{
-    background-color: rgba(83, 83, 83, 0.4);
-}
-.add-button:focus {
-    outline:0;
-}
-.like-button{
-    position: absolute;
-    top: 400px;
-    height: 50px;
-    width: 160px;
-    left: 230px;
-    border-radius: 50%;
-    border: none;
-    width: 50px;
-    height: 50px;
-    color: white;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.green{
-    position: absolute;
-    top: 400px;
-    height: 50px;
-    width: 160px;
-    left: 230px;
-    border-radius: 50%;
-    border: none;
-    width: 50px;
-    height: 50px;
-    color: green;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.like-button:hover{
-    background-color: rgba(83, 83, 83, 0.4);
-}
-.like-button:focus {
-    outline:0;
-}
-.dislike-button{
-    position: absolute;
-    top: 400px;
-    height: 50px;
-    width: 160px;
-    left: 290px;
-    border-radius: 50%;
-    border: none;
-    width: 50px;
-    height: 50px;
-    color: white;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.red{
-    position: absolute;
-    top: 400px;
-    height: 50px;
-    width: 160px;
-    left: 290px;
-    border-radius: 50%;
-    border: none;
-    width: 50px;
-    height: 50px;
-    color: red;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.dislike-button:hover{
-    background-color: rgba(83, 83, 83, 0.4);
-}
-.dislike-button:focus {
-    outline:0;
-}
-.movie-title{
-    position: absolute;
-    top: 560px;
-    margin-left: 30px;
-    max-width: 550px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
-    font-weight:900;
-    font-size: 20px;
-}
-.movie-overview{
-    position: absolute;
-    top: 600px;
-    margin-left: 30px;
-    max-width: 450px;
-    color: white;
-    font-size: 16px;
-}
-.infoMovie {
-    display: flex;
-    width: 200px;
-}
-span{
-    color: white;
-}
-.movieExcerpt {
-    width: 600px;
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: 100px;
-}
-.infoDetails {
-    width: 200px;
-    margin-top: 230px;
-    margin-left: -88px;
-}   
-.extraInfo {
-    color: grey;
-    width: 400px;
-    height: auto;
-    margin: 20px;
-} 
-@media screen and (min-width: 539px) {
-    .popup{
-        border-radius: 5px;
-        width: 600px;
-        height: 900px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    .movie-overview{
-        top: 200px;
-    }
-}
-@media screen and (min-width: 768px) { 
-    .popup{
-        top: -100px;
-        left: 0;
-        width: 900px;
-        height: 900px;
-    }
-    .movie-overview{
-        top: 300px;
-    }
-}
-@media screen and (min-width: 992px) {
-    .popup{
-        top: 0;
-        left: 0;
-        width: 900px;
-        height: 900px;
-    }
-    .movie-overview{
-        top: 350px;
-    }
-}
+
 @media screen and (min-width: 1200px) {
-    .popup{
-        top: 0;
-        left: 0;
-        width: 900px;
-        height: 900px;
-    }
-    .movie-overview{
-        top: 600px;
-    }
-    .infoMovie {
-        display: flex;
-        width: 200px;
-    }
-    .infoDetails {
-        width: 200px;
-        margin-top: 40px;
-        margin-left: 510px;
-    }   
+  .popup {
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 900px;
+  }
+  .movie-overview {
+    top: 600px;
+  }
+  .infoMovie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 200px;
+  }
+  .infoDetails {
+    width: 200px;
+    margin-top: 40px;
+    margin-left: 510px;
+  }
 }
+/*# sourceMappingURL=Info.css.map */

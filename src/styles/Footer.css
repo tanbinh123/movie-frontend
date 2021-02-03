@@ -1,65 +1,83 @@
 .footer-iconbox {
-    display: flex;
-    margin-left: 10px;
-    font-size: 20px;
-    color: #808080;
-    margin:32px;
-} 
-.footer-iconbox svg{
-    margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #808080;
+  margin: 32px;
 }
+
 .footer-links {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    font-size: 10px;
-    color: #808080;
-    margin:25px;
-} 
-.link-container{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 25px;
+  text-decoration: none;
 }
-.footer-box {
-    display: flex;
-    justify-content: center;
-    width: 600px;
+
+.footer-links .link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
 }
-li {
-    box-sizing: border-box;
-    margin-bottom: 16px;
+
+.footer-links .link-container li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 16px;
+  opacity: 0.7;
+  color: #808080;
+  font-size: 10px;
+  list-style: none;
 }
+
+.footer-links .link-container:hover {
+  opacity: 1;
+  color: #d1d1d1;
+}
+
 @media screen and (min-width: 539px) {
-    .footer-iconbox {
-        font-size: 20px;
-    } 
-    .footer-links {
-        font-size: 10px;
-    }  
+  .footer-iconbox {
+    font-size: 20px;
+  }
+  .footer-links .link-container li {
+    font-size: 10px;
+  }
 }
-@media screen and (min-width: 768px) { 
-    .footer-iconbox {
-        font-size: 30px;
-    } 
-    .footer-links {
-        font-size: 10px;
-    } 
+
+@media screen and (min-width: 768px) {
+  .footer-iconbox {
+    font-size: 30px;
+  }
+  .footer-links .link-container li {
+    font-size: 10px;
+  }
 }
+
 @media screen and (min-width: 992px) {
-    .footer-iconbox {
-        font-size: 40px;
-    } 
-    .footer-links {
-        font-size: 14px;
-    } 
+  .footer-iconbox {
+    font-size: 40px;
+  }
+  .footer-links .link-container li {
+    font-size: 14px;
+  }
 }
+
 @media screen and (min-width: 1200px) {
-    .footer-iconbox {
-        font-size: 40px;
-        margin:30px; 
-    }
-    .footer-links {
-        font-size: 16px;
-    }  
+  .footer-iconbox {
+    margin: 30px;
+  }
+  .footer-links .link-container li {
+    font-size: 20px;
+  }
 }
+/*# sourceMappingURL=Footer.css.map */
