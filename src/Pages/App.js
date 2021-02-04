@@ -12,17 +12,19 @@ import Lane00 from '../components/Lane00.js'
 import LaneDisney from '../components/LaneDisney.js'
 import LaneActor from '../components/LaneActor.js'
 
-import LaneComedy from '../components/LaneComedy';
-import LaneAction from '../components/LaneAction';
-import LaneThriller from '../components/LaneThriller';
-import LaneFamily from '../components/LaneFamily';
-import LaneFantasy from '../components/LaneFantasy';
-import LaneCrime from '../components/LaneCrime';
-import LaneAdventure from '../components/LaneAdventure';
+
+
+// import LaneComedy from '../components/LaneComedy';
+// import LaneAction from '../components/LaneAction';
+// import LaneThriller from '../components/LaneThriller';
+// import LaneFamily from '../components/LaneFamily';
+// import LaneFantasy from '../components/LaneFantasy';
+// import LaneCrime from '../components/LaneCrime';
+// import LaneAdventure from '../components/LaneAdventure';
 
 import Footer from '../components/Footer'
 
-function App({ backdrop, overview, title, youtubebackground, logo, youtube }) {
+function App({ array80, backdrop, overview, title, youtubebackground, logo, youtube, }) {
   const [muted, setMuted] = useState(true);
   const [on, setOn] = useState(false);
   const [handlePause, setHandlePause] = useState(true);
@@ -54,6 +56,10 @@ function App({ backdrop, overview, title, youtubebackground, logo, youtube }) {
     setOn(!on);
     setHandlePause(!handlePause);
   };
+
+
+
+
   return (
     <div className="App" >
       <Navigation />
@@ -77,18 +83,18 @@ function App({ backdrop, overview, title, youtubebackground, logo, youtube }) {
         </div>
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
-      <Lane80 />
+      <Lane80 array80={array80} />
       <Lane90 />
       <Lane00 />
       <LaneDisney />
       <LaneActor />
-      <LaneComedy />
+      {/* <LaneComedy />
       <LaneAction />
       <LaneThriller />
       <LaneFamily />
       <LaneFantasy />
       <LaneCrime />
-      <LaneAdventure />
+      <LaneAdventure /> */}
       <Footer />
     </div>
   );

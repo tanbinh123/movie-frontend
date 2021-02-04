@@ -66,15 +66,110 @@
 }
 .parent .popup {
     display: none;
+    background-color: rgb(32, 32, 32);
   }
 .parent:hover .popup {
     display: block;
-    width: 150px;
+    width: 300px;
     height: 150px;
   }
-  .red{
-      color: red;
+.info-play-button {
+    height: 50px;
+    width: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 50px;
+    background-color:white;
+    color: black;
+    border: none;
+    z-index: 10;
   }
-  .green{
+.info-play-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+.info-play-button:focus {
+    outline: 0;
+  }
+.info-play-button-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+.add-button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 170px;
+    color: white;
+  }
+  
+.add-button:hover {
+    background-color: rgba(83, 83, 83, 0.4);
+  }
+  
+.add-button:focus {
+    outline: 0;
+  }
+  
+.like-button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 230px;
+    color: white;
+  }
+  
+.like-button:hover {
+    background-color: rgba(83, 83, 83, 0.4);
+  }
+  
+.like-button:focus {
+    outline: 0;
+  }
+  
+.green {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 230px;
     color: green;
-}
+  }
+  
+.dislike-button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 290px;
+    color: white;
+  }
+  
+.dislike-button:hover {
+    background-color: rgba(83, 83, 83, 0.4);
+  }
+  
+.dislike-button:focus {
+    outline: 0;
+  }
+  
+.red {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 290px;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.4);
+  }

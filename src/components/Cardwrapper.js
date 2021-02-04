@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import '../styles/Lane.css';
 import { VscTriangleRight } from 'react-icons/vsc';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BiDislike } from 'react-icons/bi';
@@ -13,21 +14,13 @@ function Cardwrapper({ logo, title }) {
     function Buttons() {
         return (
             <div className="buttons">
+                <button className='info-play-button'><VscTriangleRight className='play-button-icon' /></button>
+                <button className='add-button' ><AiOutlinePlus /></button>
                 <button onClick={() => setBgColorLike((bgColorLike) => !bgColorLike)} className={`like-button ${bgColorLike ? "green" : ""}`}><BiLike /></button>
                 <button onClick={() => setBgColorDisLike((bgColorDisLike) => !bgColorDisLike)} className={`dislike-button ${bgColorDisLike ? "red" : ""}`}><BiDislike /></button>
-                <button className='info-play-button'><VscTriangleRight className='play-button-icon' />Afspelen</button>
-                <button className='add-button' ><AiOutlinePlus /></button>
             </div>
         );
     }
-
-        // for (let i = 0; i < 40; i++) {
-        //     logo.push(logo[i] = title[i])
-        //     console.log(logo)
-        // }
-
-
-
         return (
             <>
                 <div>
