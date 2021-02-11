@@ -8,7 +8,7 @@ import { IoIosArrowDropdown } from 'react-icons/io';
 import ReactPlayer from 'react-player'
 import screenfull from 'screenfull'
 import HoverIntent from 'react-hoverintent'
-import Info from './Info.js'
+import InfoL from './InfoL.js'
 
 function Card({ item }) {
     const [bgColorLike, setBgColorLike] = useState(false)
@@ -30,15 +30,18 @@ function Card({ item }) {
 
     return (
         <div>
-                <div>{on ? <Info item={item} backdrop={item} toggleTrueFalse={toggleTrueFalse}  /> : null}</div>        
+                <div>{on ? <InfoL item={item} toggleTrueFalse={toggleTrueFalse} /> : null}</div>        
                 <div className="parent">
                     <div className="myDIV" onClick={() => setShowPop(!showPop)}>
-                        <img src={`${url}${item}`} className={`${!showPop ? "yes" : "none"}`} alt="img" width="300" />
+                        <div className={`${!showPop ? "yes" : "none"}`}>
+                        <img src={`${url}${item.backdrop_path}`} className="backdrop" alt="img" width="300" />
+                        <img src={item.movie_logos.movielogos[0].url_hd} className="backdrop_logo" alt=""  onError="display='none'" />
+                        </div>
                     </div>
                     <div className={`${showPop ? "yes" : "none"}`}>
                         <HoverIntent
                             onMouseOver={() => { setWait("") }}
-                            onMouseOut={() => setWait(`${url}${item}`)}
+                            onMouseOut={() => setWait(`${url}${item.backdrop_path}`)}
                             sensitivity={7}
                             interval={100}
                             timeout={100}
@@ -46,7 +49,7 @@ function Card({ item }) {
                             <div className="laneimg">
                                 <ReactPlayer
                                     ref={player}
-                                    url="https://www.youtube.com/watch?v=V75dMMIW2B4"
+                                    url={`https://www.youtube.com/watch?v=${item.trailer}`}
                                     light={wait}
                                     width="330px"
                                     height="200px"
@@ -67,7 +70,9 @@ function Card({ item }) {
                                     <button className='add-button' onClick={() => setShowPop(!showPop)} ><IoIosArrowDropdown style={{fontSize: "30px"}} /></button>
                                     </div>
                                 </div >
-                                <p>Runtime: 120min</p>
+                                <p>{item.title}</p>
+                                <p>{item.runtime} min</p>
+                                <p>Director:{item.director}</p>
                             </div>
                         </HoverIntent>
                     </div>

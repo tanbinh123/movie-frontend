@@ -6,14 +6,21 @@ import '../styles/App.css';
 import screenfull from 'screenfull'
 import Navigation from '../components/Navigation';
 import Info from '../components/Info.js'
-import Lane80 from '../components/Lane80.js'
-import Lane90 from '../components/Lane90.js'
-import Lane00 from '../components/Lane00.js'
-import LaneDisney from '../components/LaneDisney.js'
-import LaneActor from '../components/LaneActor.js'
+// import Lane80 from '../components/Lane80.js'
+// import Lane90 from '../components/Lane90.js'
+// import Lane00 from '../components/Lane00.js'
+// import LaneDisney from '../components/LaneDisney.js'
+// import LaneActor from '../components/LaneActor.js'
+import LaneAction from '../components/LaneAction.js'
+import LaneAdventure from '../components/LaneAdventure.js'
+import LaneComedy from '../components/LaneComedy.js'
+import LaneCrime from '../components/LaneCrime.js'
+import LaneFamily from '../components/LaneFamily.js'
+import LaneFantasy from '../components/LaneFantasy.js'
+import LaneThriller from '../components/LaneThriller.js'
 import Footer from '../components/Footer'
 
-function App({ arrayDisney, arrayJohnnydepp, array00, array90, array80, backdrop, overview, title, youtubebackground, logo, youtube, }) {
+function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily, arrayFantasy, arrayThriller, arrayDisney, arrayJohnnydepp, array00, array90, array80, backdrop, overview, title, youtubebackground, logo, youtube, }) {
   const [muted, setMuted] = useState(true);
   const [on, setOn] = useState(false);
   const [handlePause, setHandlePause] = useState(true);
@@ -69,11 +76,18 @@ function App({ arrayDisney, arrayJohnnydepp, array00, array90, array80, backdrop
         </div>
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
-      <Lane80 array80={array80} />
+      {/* <Lane80 array80={array80} />
       <Lane90 array90={array90}/>
       <Lane00 array00={array00}/>
       <LaneDisney arrayDisney={arrayDisney}/>
-      <LaneActor arrayJohnnydepp={arrayJohnnydepp}/>
+      <LaneActor arrayJohnnydepp={arrayJohnnydepp}/>  */}
+      <LaneAdventure arrayAdventure={arrayAdventure}/> 
+      <LaneComedy arrayComedy={arrayComedy}/> 
+       <LaneCrime arrayCrime={arrayCrime}/> 
+      <LaneFamily arrayFamily={arrayFamily}/> 
+      <LaneAction arrayAction={arrayAction}/>
+      <LaneFantasy arrayFantasy={arrayFantasy}/> 
+      <LaneThriller arrayThriller={arrayThriller}/>
       <Footer />
     </div>
   );

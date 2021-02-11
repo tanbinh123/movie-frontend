@@ -1,32 +1,16 @@
 import React from "react";
-import axios from 'axios';
 import '../styles/Lane.css';
 import Cardwrapper from './Cardwrapper'
 
-const title = [];
-const logo = [];
-
-function Lane00s({array00}) {
-
-
-  const fetchData = async () => {
-    const response = await axios(
-      'http://192.168.2.9:8080/movies/discover/00s',
-    );
-    for (let i = 0; i < 40; i++) {
-      logo.push(logo[i] = response.data[i].backdrop_path)
-      title.push(title[i] = response.data[i].title)
-    }
-  };
-  fetchData();
+function Lane80s(array00) {
 
   return (
     <>
       <h3>00's movies</h3>
       <div>
-        <Cardwrapper logo={logo} title={title} />
+        <Cardwrapper array={array00.array00} />
       </div>
     </>
   );
 };
-export default Lane00s;
+export default Lane80s;
