@@ -6,7 +6,7 @@ import Cardwrapper from './Cardwrapper'
 const title = [];
 const logo = [];
 
-function LaneActor() {
+function LaneActor({arrayJohnnydepp}) {
 
 
     const fetchData = async () => {

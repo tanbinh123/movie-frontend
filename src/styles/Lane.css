@@ -5,21 +5,29 @@
 .cards-wrapper::-webkit-scrollbar {
     display: none;
   }
+
+.cards-wrapper:hover .laneimg .logoimg {
+  transform: translateX(-30%);
+  transition-delay:1s;
+}
 .parent{
   position: relative;
     top: 0;
     left: 0;
+    margin-left: 15px;
+    opacity: 0.6;
 }
 .laneimg{
     position: relative;
     top: 0;
     left: 0;
     width: 300px;
-    margin: 0 10px;
+    margin: 0 20px;
     flex: 0 0 19.7%;
     padding: 0;
     transition: linear 100ms;
     opacity: 0.6;
+    border-radius: 5px;
 }
 .logoimg {
     position: absolute;
@@ -28,39 +36,34 @@
     width: 200px;
     opacity: 0.6;
 }
-.cards-wrapper:hover .laneimg .logoimg {
-    transform: translateX(-15%);
-}
+
 .laneimg:hover ~ .laneimg .logoimg {
-    transform: translateX(15%);
+    transform: translateX(30%);
+    transition-delay:1s;
 }
 .logoimg:hover{
     opacity: 1;
 }
-.laneimg:hover ~ .logoimg {
+
+.laneimg:hover{
     opacity: 1;
 }
 .parent:hover {
     transform: scale(1.1) !important;
+    opacity: 1;
 }
 .container {
     display: flex;
     overflow: auto; 
     padding: 0;
 }
-.item {
-    width: 300px;
-    /* flex: 0 0 19.7%; */
-    margin: 0 2px 0 0;
-    padding: 0;
-    transition: transform 100ms ease 100ms;
-}
-.container:hover .item {
-    transform: translateX(-10%);
+
+/* .container:hover .item {
+    transform: translateX(-30%);
 }
 .item:hover ~ .item {
-    transform: translateX(10%);
-}
+    transform: translateX(30%);
+} */
 .item:hover {
     transform: scale(1.1) !important;
 }
@@ -172,4 +175,38 @@
     left: 290px;
     color: red;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+  .video{
+      display: block;       
+      background: #000;
+      border: none;        
+  }
+
+  .laneimg:hover {
+    width: 330px;
+    height: 300px;
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+  .hide {
+    display: none;
+  }
+      
+  /* .myDIV:hover + .hide {
+    display: block;
+    position: absolute;
+    top: 0;
+    color: red;
+    z-index: 10;
+  } */
+
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .yes{
+    display: block;
+  }
+  .none{
+    display: none;
   }

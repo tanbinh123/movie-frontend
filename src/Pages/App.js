@@ -11,20 +11,9 @@ import Lane90 from '../components/Lane90.js'
 import Lane00 from '../components/Lane00.js'
 import LaneDisney from '../components/LaneDisney.js'
 import LaneActor from '../components/LaneActor.js'
-
-
-
-// import LaneComedy from '../components/LaneComedy';
-// import LaneAction from '../components/LaneAction';
-// import LaneThriller from '../components/LaneThriller';
-// import LaneFamily from '../components/LaneFamily';
-// import LaneFantasy from '../components/LaneFantasy';
-// import LaneCrime from '../components/LaneCrime';
-// import LaneAdventure from '../components/LaneAdventure';
-
 import Footer from '../components/Footer'
 
-function App({ array80, backdrop, overview, title, youtubebackground, logo, youtube, }) {
+function App({ arrayDisney, arrayJohnnydepp, array00, array90, array80, backdrop, overview, title, youtubebackground, logo, youtube, }) {
   const [muted, setMuted] = useState(true);
   const [on, setOn] = useState(false);
   const [handlePause, setHandlePause] = useState(true);
@@ -57,9 +46,6 @@ function App({ array80, backdrop, overview, title, youtubebackground, logo, yout
     setHandlePause(!handlePause);
   };
 
-
-
-
   return (
     <div className="App" >
       <Navigation />
@@ -84,17 +70,10 @@ function App({ array80, backdrop, overview, title, youtubebackground, logo, yout
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
       <Lane80 array80={array80} />
-      <Lane90 />
-      <Lane00 />
-      <LaneDisney />
-      <LaneActor />
-      {/* <LaneComedy />
-      <LaneAction />
-      <LaneThriller />
-      <LaneFamily />
-      <LaneFantasy />
-      <LaneCrime />
-      <LaneAdventure /> */}
+      <Lane90 array90={array90}/>
+      <Lane00 array00={array00}/>
+      <LaneDisney arrayDisney={arrayDisney}/>
+      <LaneActor arrayJohnnydepp={arrayJohnnydepp}/>
       <Footer />
     </div>
   );

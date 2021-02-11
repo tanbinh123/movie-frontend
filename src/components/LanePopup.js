@@ -1,18 +1,18 @@
 import React, { useState, useRef } from "react";
 import ReactPlayer from 'react-player'
-import '../styles/Info.css';
+import '../styles/LanePopup.css';
 import { VscTriangleRight } from 'react-icons/vsc';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BiDislike } from 'react-icons/bi';
 import { BiLike } from 'react-icons/bi';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
 import screenfull from 'screenfull'
 
-function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
+function Info({ youtube, backdrop}) {
+  const [fullScreen, setFullScreen] = useState(false)
   const [bgColorLike, setBgColorLike] = useState(false)
   const [bgColorDisLike, setBgColorDisLike] = useState(false)
   const [wait, setWait] = useState(backdrop)
-  
+
   const logName = () => {
     setWait("")
   }
@@ -22,6 +22,7 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
 
   const handleClickFullscreen = () => {
     if (screenfull.isEnabled) {
+      setFullScreen(true);
       screenfull.request(player.current.wrapper);
     }
   }
@@ -29,8 +30,6 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
   return (
       <div className="popup-container">
         <div className="popup">
-        <div className="click-left" onClick={toggleTrueFalse} />
-        <div className="click-right" onClick={toggleTrueFalse} />
         <div className="reactplayer">
             <ReactPlayer
               ref={player}
@@ -40,29 +39,16 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
               controls={false}
               loop={true}
               width="cover"
-              height="500px"
+              height="300px"
               // playIcon={<button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>}
-              playIcon={<div></div>}
+              playIcon={fullScreen}
               mute
             />
-            <AiOutlineCloseCircle onClick={toggleTrueFalse} className='close-button' />
             <div className="movie-logo-container">
-            <img className="info-movie-logo" src={logo} alt="logo" />
             <button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
             <button className='add-button' ><AiOutlinePlus /></button>
             <button onClick={() => setBgColorLike((bgColorLike) => !bgColorLike)} className={`like-button ${bgColorLike ? "green": ""}`}><BiLike /></button>
             <button onClick={() => setBgColorDisLike((bgColorDisLike) => !bgColorDisLike)} className={`dislike-button ${bgColorDisLike ? "red" : ""}`}><BiDislike /></button>
-            </div>
-            <div>
-              <div className="movieExcerpt">
-                <p className="movie-title">Over {title} </p>
-                <p className="movie-overview">{overview}</p>
-              </div>
-              <div className="infoDetails">
-                <p className="extraInfo">Genres: <span>Crime, Thiller, Drama</span></p>
-                <p className="extraInfo">Naam regisseur: <span>Todd Phillips</span></p>
-                <p className="extraInfo">Duur: <span>122 min</span></p>
-              </div>
             </div>
           </div>
         </div>

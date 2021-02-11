@@ -5,7 +5,7 @@ import Cardwrapper from './Cardwrapper'
 const title = [];
 const logo = [];
 
-function LaneDisney() {
+function LaneDisney({arrayDisney}) {
 
 
   async function fetchMoviesJSON() {
@@ -14,7 +14,7 @@ function LaneDisney() {
     return movies;
   }
   fetchMoviesJSON().then(response => {
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < response.length; i++) {
       logo.push(logo[i] = response[i].backdrop_path)
       title.push(title[i] = response[i].title)
     }

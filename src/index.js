@@ -21,6 +21,7 @@ import Vacatures from './pages/Vacatures';
 import WettelijkeBepalingen from './pages/WettelijkeBepalingen';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Container fluid>

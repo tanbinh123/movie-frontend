@@ -6,7 +6,7 @@ import Cardwrapper from './Cardwrapper'
 const title = [];
 const logo = [];
 
-function Lane00s() {
+function Lane00s({array00}) {
 
 
   const fetchData = async () => {
@@ -19,7 +19,6 @@ function Lane00s() {
     }
   };
   fetchData();
-
 
   return (
     <>
