@@ -1,3 +1,11 @@
+li {
+  text-decoration: none !important;
+}
+
+li:hover {
+  text-decoration: underline !important;
+}
+
 .footer-iconbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,12 +17,15 @@
 }
 
 .footer-links {
+  font-size: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
   margin: 25px;
   text-decoration: none;
 }
@@ -65,7 +76,7 @@
 
 @media screen and (min-width: 992px) {
   .footer-iconbox {
-    font-size: 40px;
+    font-size: 20px;
   }
   .footer-links .link-container li {
     font-size: 14px;
@@ -74,10 +85,10 @@
 
 @media screen and (min-width: 1200px) {
   .footer-iconbox {
-    margin: 30px;
+    margin: 40px;
   }
   .footer-links .link-container li {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=Footer.css.map */

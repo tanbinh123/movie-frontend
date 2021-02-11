@@ -48,20 +48,20 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
             <AiOutlineCloseCircle onClick={toggleTrueFalse} className='close-button' />
             <div className="movie-logo-container">
             <img className="info-movie-logo" src={logo} alt="logo" />
-            <button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
+            <button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Play</button>
             <button className='add-button' ><AiOutlinePlus /></button>
             <button onClick={() => setBgColorLike((bgColorLike) => !bgColorLike)} className={`like-button ${bgColorLike ? "green": ""}`}><BiLike /></button>
             <button onClick={() => setBgColorDisLike((bgColorDisLike) => !bgColorDisLike)} className={`dislike-button ${bgColorDisLike ? "red" : ""}`}><BiDislike /></button>
             </div>
             <div>
               <div className="movieExcerpt">
-                <p className="movie-title">Over {title} </p>
+                <p className="movie-title">About {title} </p>
                 <p className="movie-overview">{overview}</p>
               </div>
               <div className="infoDetails">
                 <p className="extraInfo">Genres: <span>Crime, Thiller, Drama</span></p>
-                <p className="extraInfo">Naam regisseur: <span>Todd Phillips</span></p>
-                <p className="extraInfo">Duur: <span>122 min</span></p>
+                <p className="extraInfo">Director: <span>Todd Phillips</span></p>
+                <p className="extraInfo">Runtime: <span>122 min</span></p>
               </div>
             </div>
           </div>

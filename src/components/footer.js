@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div> 
+    <div className="footer-container"> 
       <div className="footer-iconbox">
     <a href="https://www.facebook.com/NetflixNederland">
       <AiOutlineFacebook />
@@ -23,56 +23,56 @@ function Footer() {
       <AiOutlineYoutube />
     </a>
   </div>
-        <div className="footer-links">
+      <div className="footer-links">
           <div className="link-container">
           <Link to="/AudioOndertiteling">
-            <li>Audio en ondertiteling</li>
+            <li className="underline">Audio and Subtitles</li>
           </Link>
           <Link to="/Mediacenter">
-            <li>Mediacenter</li>
+            <li className="underline">Media Centre</li>
           </Link>
           <Link to="/Privacy">
-            <li>Privacy</li>
+            <li className="underline">Privacy</li>
           </Link>
           <Link to="/Contact">
-            <li>Contact opnemen</li>
+            <li className="underline">Contact Us</li>
           </Link>
           </div>
           <div className="link-container">
           <Link to="/Audiodescriptie">
-            <li>Audiodescriptie</li>
+            <li className="underline">Audiodecription</li>
           </Link>
           <Link to="/Beleggersrelaties">
-            <li>Relaties met investeerders</li>
+            <li className="underline">Investor Relations</li>
           </Link>
           <Link to="/WettelijkeBepalingen">
-            <li>Wettelijke bepalingen</li>
+            <li className="underline">Legal Notices</li>
           </Link>
           </div>
           <div className="link-container">
           <Link to="/Helpcenter">
-            <li>Helpcenter</li>
+            <li className="underline">Help Centre</li>
           </Link>
           <Link to="/Vacatures">
-            <li>Vacatures</li>
+            <li className="underline">Jobs</li>
           </Link>
           <Link to="/Cookievoorkeuren">
-            <li>Cookievoorkeuren</li>
+            <li>Cookie Preferences</li>
           </Link>
           </div>
           <div className="link-container">
           <Link to="/Cadeaubonnen">
-            <li>Cadeaubonnen</li>
+            <li className="underline">Redeem gift cards</li>
           </Link>
           <Link to="/Bedrijfsgegevens">
-            <li>Bedrijfsgegevens</li>
+            <li className="underline">Corporate Information</li>
           </Link>
           <Link to="/Gebruiksvoorwaarden">
-            <li>Gebruiksvoorwaarden</li>
+            <li className="underline">Terms of Use</li>
           </Link>
           </div>
        </div>
-     </div>
+    </div>
   );
 }
 

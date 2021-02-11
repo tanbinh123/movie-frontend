@@ -70,9 +70,8 @@ function Card({ item }) {
                                     <button className='add-button' onClick={() => setShowPop(!showPop)} ><IoIosArrowDropdown style={{fontSize: "30px"}} /></button>
                                     </div>
                                 </div >
-                                <p>{item.title}</p>
-                                <p>{item.runtime} min</p>
-                                <p>Director:{item.director}</p>
+                                <p className='card-text'>{item.runtime} min - {item.genres[0].name}</p>
+                                
                             </div>
                         </HoverIntent>
                     </div>

@@ -32,7 +32,8 @@ $popupClr :rgb(19, 19, 19);
 $transparant: rgba(0, 0, 0, 0); 
 
 .popup-container{
-    @include positionAbsolute();
+    position: fixed;
+    top: 0px;
     left: 0px;
     border-radius: 5px;
     width: 100vw;
@@ -162,14 +163,14 @@ $transparant: rgba(0, 0, 0, 0);
         margin-right: 100px;
         .movie-title{
             @include excerpt();
-            top: 560px;
+            top: 540px;
             max-width: 550px;
             color: rgba(255, 255, 255, 0.7);
             font-weight:900;
         }
         .movie-overview{
             @include excerpt();
-            top: 600px;
+            top: 580px;
             max-width: 450px;
             color: $primaryClr;
         }

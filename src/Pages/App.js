@@ -71,8 +71,8 @@ function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily
       <div className="movie-logo-container">
         <img className="movie-logo" src={logo} alt="logo" />
         <div>
-          <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>
-          <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />Meer informatie</button>
+          <button className='play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Play</button>
+          <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />More info</button>
         </div>
       </div>
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
@@ -81,13 +81,13 @@ function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily
       <Lane00 array00={array00}/>
       <LaneDisney arrayDisney={arrayDisney}/>
       <LaneActor arrayJohnnydepp={arrayJohnnydepp}/>  */}
-      <LaneAdventure arrayAdventure={arrayAdventure}/> 
-      <LaneComedy arrayComedy={arrayComedy}/> 
-       <LaneCrime arrayCrime={arrayCrime}/> 
-      <LaneFamily arrayFamily={arrayFamily}/> 
-      <LaneAction arrayAction={arrayAction}/>
-      <LaneFantasy arrayFantasy={arrayFantasy}/> 
-      <LaneThriller arrayThriller={arrayThriller}/>
+      <div className="lane"><LaneAdventure arrayAdventure={arrayAdventure}/> </div>
+      <div className="lane"><LaneComedy arrayComedy={arrayComedy}/></div>
+      <div className="lane"><LaneCrime arrayCrime={arrayCrime}/></div>
+      <div className="lane"><LaneFamily arrayFamily={arrayFamily}/></div>
+      <div className="lane"><LaneAction arrayAction={arrayAction}/></div>
+      <div className="lane"><LaneFantasy arrayFantasy={arrayFantasy}/></div>
+      <div className="lane"><LaneThriller arrayThriller={arrayThriller}/></div>
       <Footer />
     </div>
   );

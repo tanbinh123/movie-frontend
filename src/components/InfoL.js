@@ -47,7 +47,7 @@ function Info({ item, toggleTrueFalse }) {
             />
             <AiOutlineCloseCircle onClick={toggleTrueFalse} className='close-button' />
             <div className="movie-logo-container">
-            <img className="info-movie-logo" src={item.movie_logos.movielogos[0].url_hd} alt="logo" />
+            <img className="info-movie-logo" src={item.movie_logos.movielogos[0].url_hd} alt="" onError="display='none'"/>
             <button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Play</button>
             <button className='add-button' ><AiOutlinePlus /></button>
             <button onClick={() => setBgColorLike((bgColorLike) => !bgColorLike)} className={`like-button ${bgColorLike ? "green": ""}`}><BiLike /></button>
@@ -59,7 +59,7 @@ function Info({ item, toggleTrueFalse }) {
                 <p className="movie-overview">{item.overview}</p>
               </div>
               <div className="infoDetails">
-                <p className="extraInfo">Genres: <span>{item.genres[0].name}, {item.genres[1].name}, {item.genres[2].name}</span></p>
+                <p className="extraInfo">Genres: <span>{item.genres[0].name}, {item.genres[1].name}</span></p>
                 <p className="extraInfo">Director: <span>{item.director}</span></p>
                 <p className="extraInfo">Runtime: <span>{item.runtime}min</span></p>
               </div>
