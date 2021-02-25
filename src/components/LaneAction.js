@@ -3,7 +3,6 @@ import '../styles/Lane.css';
 import Cardwrapper from './Cardwrapper'
 
 function LaneAction(arrayAction) {
-
   return (
     <>
       <h3>Action movies</h3>

@@ -32,7 +32,7 @@ function Card({ item }) {
         <div>
                 <div>{on ? <InfoL item={item} toggleTrueFalse={toggleTrueFalse} /> : null}</div>        
                 <div className="parent">
-                    <div className="myDIV" onClick={() => setShowPop(!showPop)}>
+                    <div onClick={() => setShowPop(!showPop)}>
                         <div className={`${!showPop ? "yes" : "none"}`}>
                         <img src={`${url}${item.backdrop_path}`} className="backdrop" alt="img" width="300" />
                         <img src={item.movie_logos.movielogos[0].url_hd} className="backdrop_logo" alt=""  onError="display='none'" />

@@ -3,7 +3,6 @@ import '../styles/Lane.css';
 import Cardwrapper from './Cardwrapper'
 
 function LaneDisney(arrayDisney) {
-
   return (
     <>
       <h3>Disney movies</h3>

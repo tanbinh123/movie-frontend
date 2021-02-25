@@ -3,7 +3,6 @@ import Card2 from './Card2.js'
 import '../styles/Lane2.css';
 
 function Cardwrapper2({ array }) {
-    console.log(array)
     return (
         <div>
             <ul className="cards-wrapper2">

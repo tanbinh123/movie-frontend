@@ -41,7 +41,6 @@ function Info({ item, toggleTrueFalse }) {
               loop={true}
               width="cover"
               height="500px"
-              // playIcon={<button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Afspelen</button>}
               playIcon={<div></div>}
               mute
             />

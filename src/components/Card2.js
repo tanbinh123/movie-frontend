@@ -32,7 +32,7 @@ function Card2({ item }) {
         <div>
                 <div>{on ? <InfoS item={item} toggleTrueFalse={toggleTrueFalse} /> : null}</div>        
                 <div className="parent2">
-                    <div className="myDIV" onClick={() => setShowPop(!showPop)}>
+                    <div onClick={() => setShowPop(!showPop)}>
                         <div className={`${!showPop ? "yes" : "none"}`}>
                         <img src={`${url}${item.backdropPath}`} className="backdrop" alt="" onError="display='none'" width="300"  />
                         <img src={item.logoUrl} className="backdrop_logo" alt=""  onError="display='none'" />
@@ -46,12 +46,12 @@ function Card2({ item }) {
                             interval={100}
                             timeout={100}
                         >
-                            <div className="laneimg">
+                            <div className="laneimg2">
                                 <ReactPlayer
                                     ref={player}
                                     url={`https://www.youtube.com/watch?v=${item.youtubeKey}`}
                                     light={wait}
-                                    width="330px"
+                                    width="300px"
                                     height="200px"
                                     playIcon={<div></div>}
                                     playing={true}

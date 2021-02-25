@@ -1,5 +1,6 @@
-.navigation{
+.navigation2{
     position: fixed !important;
+    top: 0;
     font-family: Helvetica;
     width: 100%;
     /* padding-top: 20px; */

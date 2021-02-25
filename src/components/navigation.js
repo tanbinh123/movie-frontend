@@ -42,7 +42,6 @@ function Search() {
       if (evt.key === "Enter") {
           function renderPictures() {
               fetch(`http://localhost:8081/search/persons/${actorId}`)
-                  // fetch(`http://localhost:8081/search/persons/${actorId}`)
                   .then(response => response.json())
                   .then(result => {
                       setSearchResult(result)

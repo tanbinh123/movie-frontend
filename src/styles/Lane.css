@@ -61,13 +61,6 @@ h3{
     overflow: auto; 
     padding: 0;
 }
-
-/* .container:hover .item {
-    transform: translateX(-30%);
-}
-.item:hover ~ .item {
-    transform: translateX(30%);
-} */
 .item:hover {
     transform: scale(1.1) !important;
 }
@@ -197,14 +190,6 @@ h3{
   .hide {
     display: none;
   }
-      
-  /* .myDIV:hover + .hide {
-    display: block;
-    position: absolute;
-    top: 0;
-    color: red;
-    z-index: 10;
-  } */
 
   .buttons{
     display: flex;

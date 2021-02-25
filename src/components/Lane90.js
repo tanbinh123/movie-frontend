@@ -3,9 +3,6 @@ import '../styles/Lane.css';
 import Cardwrapper from './Cardwrapper'
 
 function Lane90s(array90) {
-
-  console.log(array90)
-
   return (
     <>
       <h3>90's movies</h3>

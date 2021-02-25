@@ -3,44 +3,34 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
 import Logo from '../images/netflix.png';
-import React from "react";
+import React, {useState, useEffect} from "react";
 // import { BsSearch } from 'react-icons/bs';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+function Search() {
 
-    this.listener = null;
-    this.state = {
-      status: "top"
-    };
-  }
+  const [status, setStatus] = useState("top")
 
-  componentDidMount() {
-    this.listener = document.addEventListener("scroll", (e) => {
-      var scrolled = document.scrollingElement.scrollTop;
-      if (scrolled >= 10) {
-        if (this.state.status !== "transparent") {
-          this.setState({ status: "transparent" });
+  useEffect(() => {
+  document.addEventListener("scroll", (e) => {
+          const scrolled = document.scrollingElement.scrollTop;
+          if (scrolled > 20) {
+            if (status !== "transparent") {
+              setStatus("transparent");
+            }
+          } 
+          else {
+            if (status !== "top") {
+              setStatus("top");
+            }
         }
-      } else {
-        if (this.state.status !== "top") {
-          this.setState({ status: "top" });
-        }
-      }
-    });
-  }
-  componentDidUpdate() {
-    document.removeEventListener("scroll", this.listener);
-  }
-
-  render() {
+      })
+    })
     return (
 
       <Navbar className="navigation2"
         style={{
           backgroundColor:
-            this.state.status === "top" ? "transparent" : "black"
+            status === "top" ? "transparent" : "black"
         }} expand="lg ">
         <Navbar.Brand href="#home"><img src={Logo} alt='img' className='logo' /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-auto" />
@@ -54,5 +44,4 @@ export default class App extends React.Component {
       </Navbar>
     );
   }
-}
-
+export default Search;

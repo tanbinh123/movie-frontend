@@ -11,20 +11,22 @@
 }
 
 .cards-wrapper2 {
+  margin-top: 30px;
   display: flex;
   flex-wrap:wrap;
   width: 100vw;
 }
 h3{
   margin-left: 60px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .search-box2{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 400px;
   width: 100px;
+  z-index: 1;
 }
 .search-bar2{
   height: 30px;
@@ -34,4 +36,14 @@ h3{
   color: white;
   outline: none;
   border: none;
+}
+
+.item2:hover {
+  transform: scale(1) !important;
+}
+
+.laneimg2:hover {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(26, 26, 26, 0.8);
 }
