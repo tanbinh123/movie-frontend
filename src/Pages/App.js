@@ -20,7 +20,7 @@ import LaneFantasy from '../components/LaneFantasy.js'
 import LaneThriller from '../components/LaneThriller.js'
 import Footer from '../components/Footer'
 
-function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily, arrayFantasy, arrayThriller, arrayDisney, arrayJohnnydepp, array00, array90, array80, backdrop, overview, title, youtubebackground, logo, youtube, }) {
+function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily, arrayFantasy, arrayThriller, arrayDisney, arrayJohnnydepp, array00, array90, array80, backdrop, overview, title, youtubebackground, logo, youtube, ytbg }) {
   const [muted, setMuted] = useState(true);
   const [on, setOn] = useState(false);
   const [handlePause, setHandlePause] = useState(true);
@@ -54,6 +54,7 @@ function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily
   };
 
   return (
+    
     <div className="App" >
       <Navigation />
       <div className="react-player">
@@ -68,6 +69,7 @@ function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily
           muted={muted}
         />
       </div>
+  
       <div className="movie-logo-container">
         <img className="movie-logo" src={logo} alt="logo" />
         <div>
@@ -75,6 +77,7 @@ function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily
           <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />More info</button>
         </div>
       </div>
+      
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
       {/* <Lane80 array80={array80} />
       <Lane90 array90={array90}/>

@@ -1,13 +1,15 @@
-$primaryClr : #808080;
+$primaryClr : #999999;
 $secondaryClr : #d1d1d1; 
 
-li{
-    text-decoration:none !important;
-}  
-li:hover{
-    text-decoration:underline !important;
-}  
 
+
+.underline  { 
+    text-decoration:underline;
+} 
+.underline:hover  { 
+    text-decoration:underline;
+    color: $primaryClr;
+} 
 
 
 
@@ -37,6 +39,7 @@ li:hover{
             color: $primaryClr;
             font-size: 10px;
             list-style: none;
+            text-decoration:none !important;
         }
         &:hover {
             opacity: 1;

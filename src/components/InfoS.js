@@ -8,10 +8,10 @@ import { BiLike } from 'react-icons/bi';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import screenfull from 'screenfull'
 
-function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
+function Info({ item, toggleTrueFalse }) {
   const [bgColorLike, setBgColorLike] = useState(false)
   const [bgColorDisLike, setBgColorDisLike] = useState(false)
-  const [wait, setWait] = useState(backdrop)
+  const [wait, setWait] = useState(item.backdrop_path)
   
   const logName = () => {
     setWait("")
@@ -25,7 +25,7 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
       screenfull.request(player.current.wrapper);
     }
   }
-  const youtubebackground = `https://www.youtube.com/watch?v=${youtube}`
+  const youtubebackground = `https://www.youtube.com/watch?v=${item.youtubeKey}`
   return (
       <div className="popup-container">
         <div className="popup">
@@ -47,7 +47,7 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
             />
             <AiOutlineCloseCircle onClick={toggleTrueFalse} className='close-button' />
             <div className="movie-logo-container">
-            <img className="info-movie-logo" src={logo} alt="logo" />
+            <img className="info-movie-logo" src={item.logoUrl} alt="" onError="display='none'"/>
             <button className='info-play-button' onClick={handleClickFullscreen}><VscTriangleRight className='play-button-icon' />Play</button>
             <button className='add-button' ><AiOutlinePlus /></button>
             <button onClick={() => setBgColorLike((bgColorLike) => !bgColorLike)} className={`like-button ${bgColorLike ? "green": ""}`}><BiLike /></button>
@@ -55,13 +55,13 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
             </div>
             <div>
               <div className="movieExcerpt">
-                <p className="movie-title">About {title} </p>
-                <p className="movie-overview">{overview}</p>
+                <p className="movie-title">About {item.title} </p>
+                <p className="movie-overview">{item.overview}</p>
               </div>
               <div className="infoDetails">
-                <p className="extraInfo">Genres: <span>Drama, Thiller, Horror</span></p>
-                <p className="extraInfo">Director: <span>Gaspar Noe</span></p>
-                <p className="extraInfo">Runtime: <span>97 min</span></p>
+                <p className="extraInfo">Genres: <span>{item.genres[0].name}, {item.genres[1].name}</span></p>
+                <p className="extraInfo">Director: <span>{item.director}</span></p>
+                <p className="extraInfo">Runtime: <span>{item.runtime}min</span></p>
               </div>
             </div>
           </div>

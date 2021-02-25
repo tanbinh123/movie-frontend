@@ -57,7 +57,7 @@ function Footer() {
             <li className="underline">Jobs</li>
           </Link>
           <Link to="/Cookievoorkeuren">
-            <li>Cookie Preferences</li>
+            <li className="underline">Cookie Preferences</li>
           </Link>
           </div>
           <div className="link-container">

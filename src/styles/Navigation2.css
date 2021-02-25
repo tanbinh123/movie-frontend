@@ -3,28 +3,10 @@
     font-family: Helvetica;
     width: 100%;
     /* padding-top: 20px; */
-    z-index: 1;
+    z-index: 1 !important;
     transition: all 0.4s ease;
-    background-color: transparent;
 }  
-.search-bar{
-    height: 30px;
-    background-color: rgba(0,0,0,0.1);
-    margin-left: 800px;
-    margin-top: 27px;
-    color: white;
-    outline: none;
-    border: none;
 
-}
-.search-button{
-    height: 30px;
-    background-color: rgba(0,0,0,0.1);
-    color: white;
-    outline: none;
-    border: none;
-
-}
 .logo{
     height: 30px;
 }
