@@ -29,26 +29,27 @@ function Api() {
     const [arrayCrime, setArrayCrime] = useState([]);
     const [arrayAdventure, setArrayAdventure] = useState([]);
     const [arrayFantasy, setArrayFantasy] = useState([]);
-    const backdrop = `https://image.tmdb.org/t/p/w1280/${bgimage}`
-    const youtubebackground = `https://www.youtube.com/watch?v=${youtube}`
+    const backdrop = `${process.env.REACT_BG}${bgimage}`
+    const youtubebackground = `${process.env.REACT_YTBG}${youtube}`
 
     useEffect(() => {
         Promise.all([
-            fetch('https://api.themoviedb.org/3/movie/495764?api_key=33ea3e5328d23c13d33ed05add4783b7'),
-            fetch('https://api.themoviedb.org/3/movie/495764/videos?api_key=33ea3e5328d23c13d33ed05add4783b7&language=en-US'),
-            fetch('http://webservice.fanart.tv/v3/movies/495764?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c'),
-            fetch('http://192.168.2.9:8080/movies/discover/80s'),
-            fetch('http://192.168.2.9:8080/movies/discover/90s'),
-            fetch('http://192.168.2.9:8080/movies/discover/00s'),
-            fetch('http://192.168.2.9:8080/movies/discover/johnnydepp'),
-            fetch('http://192.168.2.9:8080/movies/discover/disney'),
-            fetch('http://192.168.2.9:8080/movies/genre/28'),
-            fetch('http://192.168.2.9:8080/movies/genre/35'),
-            fetch('http://192.168.2.9:8080/movies/genre/53'),
-            fetch('http://192.168.2.9:8080/movies/genre/10751'),
-            fetch('http://192.168.2.9:8080/movies/genre/80'),
-            fetch('http://192.168.2.9:8080/movies/genre/12'),
-            fetch('http://192.168.2.9:8080/movies/genre/14')
+            fetch(process.env.REACT_MAIN_OVERVIEW),
+            fetch(process.env.REACT_MAIN_VIDEO),
+            fetch(process.env.REACT_MAIN_BG),
+            fetch(process.env.REACT_80),
+            fetch(process.env.REACT_90),
+            fetch(process.env.REACT_00),
+            fetch(process.env.REACT_JOHNNYDEPP),
+            fetch(process.env.REACT_DISNEY),
+            fetch(process.env.REACT_GENRE_1428),
+            fetch(process.env.REACT_GENRE_35),
+            fetch(process.env.REACT_GENRE_53),
+            fetch(process.env.REACT_GENRE_10751),
+            fetch(process.env.REACT_GENRE_80),
+            fetch(process.env.REACT_GENRE_12),
+            fetch(process.env.REACT_GENRE_14)
+            
 
         ]).then(function (responses) {
             return Promise.all(responses.map(function (response) {
