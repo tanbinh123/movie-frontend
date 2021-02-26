@@ -59,8 +59,8 @@ function Info({ title, logo, youtube, overview, backdrop, toggleTrueFalse }) {
               </div>
               <div className="infoDetails">
                 <p className="extraInfo">Genres: <span>Drama, Thiller, Horror</span></p>
-                <p className="extraInfo">Director: <span>Gaspar Noe</span></p>
-                <p className="extraInfo">Runtime: <span>97 min</span></p>
+                <p className="extraInfo">Director: <span>Cathy Yan</span></p>
+                <p className="extraInfo">Runtime: <span>109 min</span></p>
               </div>
             </div>
           </div>

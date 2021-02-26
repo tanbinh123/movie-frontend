@@ -58,7 +58,6 @@ function Info({ item, toggleTrueFalse }) {
                 <p className="movie-overview">{item.overview}</p>
               </div>
               <div className="infoDetails">
-                <p className="extraInfo">Genres: <span>{item.genres[0].name}, {item.genres[1].name}</span></p>
                 <p className="extraInfo">Director: <span>{item.director}</span></p>
                 <p className="extraInfo">Runtime: <span>{item.runtime}min</span></p>
               </div>

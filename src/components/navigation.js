@@ -56,7 +56,7 @@ function Search() {
   useEffect(() => {
   document.addEventListener("scroll", (e) => {
           const scrolled = document.scrollingElement.scrollTop;
-          if (scrolled > 20) {
+          if (scrolled > 150) {
             if (status !== "transparent") {
               setStatus("transparent");
             }

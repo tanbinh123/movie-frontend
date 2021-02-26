@@ -34,9 +34,9 @@ function Api() {
 
     useEffect(() => {
         Promise.all([
-            fetch('https://api.themoviedb.org/3/movie/14522?api_key=33ea3e5328d23c13d33ed05add4783b7'),
-            fetch('https://api.themoviedb.org/3/movie/14522/videos?api_key=33ea3e5328d23c13d33ed05add4783b7&language=en-US'),
-            fetch('http://webservice.fanart.tv/v3/movies/14522?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c'),
+            fetch('https://api.themoviedb.org/3/movie/495764?api_key=33ea3e5328d23c13d33ed05add4783b7'),
+            fetch('https://api.themoviedb.org/3/movie/495764/videos?api_key=33ea3e5328d23c13d33ed05add4783b7&language=en-US'),
+            fetch('http://webservice.fanart.tv/v3/movies/495764?api_key=d74996a4a3d05c07a61abb08608a5974&client_key=52c813aa7b8c8b3bb87f4797532a2f8c'),
             fetch('http://192.168.2.9:8080/movies/discover/80s'),
             fetch('http://192.168.2.9:8080/movies/discover/90s'),
             fetch('http://192.168.2.9:8080/movies/discover/00s'),
@@ -58,7 +58,7 @@ function Api() {
             setBgimage(data[0].backdrop_path)
             setOverview(data[0].overview);
             setTitle(data[0].title)
-            setYoutube(data[1].results[0].key);
+            setYoutube(data[1].results[1].key);
             setLogo(data[2].hdmovielogo[0].url);
             setArray80(data[3])
             setArray90(data[4])

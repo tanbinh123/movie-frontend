@@ -72,7 +72,7 @@ function Search() {
             
 
         </div>
-        <LaneSearch searchResult={searchResult} />
+        <LaneSearch searchResult={searchResult} actorName={actorName} />
         </div> 
     );
 }

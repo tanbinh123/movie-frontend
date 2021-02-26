@@ -1,13 +1,15 @@
 import React from "react";
 import '../styles/Lane.css';
 import Cardwrapper2 from './Cardwrapper2'
+import Footer from '../components/Footer'
 
-function LaneSearch(searchResult) {
+function LaneSearch({searchResult}) {
   return (
     <>
-      <h3>Search</h3>
+      <div className="title">Search</div> 
       <div>
-        <Cardwrapper2 array={searchResult.searchResult} />
+        <Cardwrapper2 array={searchResult} />
+        <Footer />
       </div>
     </>
   );

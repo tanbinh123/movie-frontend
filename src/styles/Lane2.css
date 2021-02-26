@@ -3,8 +3,10 @@
   position: relative;
   top: 0;
   left: 0;
-  opacity: 0.6;
-  padding: 20px;
+  opacity: 0.8;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .parent2:hover {
   opacity: 1;
@@ -14,11 +16,12 @@
   margin-top: 30px;
   display: flex;
   flex-wrap:wrap;
-  width: 100vw;
+  width: 100vw !important;
 }
-h3{
-  margin-left: 60px;
+.title{
+  margin-left: 40px;
   margin-top: 100px;
+  font-size: 50px ;
 }
 
 .search-box2{
@@ -36,10 +39,6 @@ h3{
   color: white;
   outline: none;
   border: none;
-}
-
-.item2:hover {
-  transform: scale(1) !important;
 }
 
 .laneimg2:hover {

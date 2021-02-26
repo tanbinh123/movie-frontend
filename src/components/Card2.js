@@ -35,7 +35,7 @@ function Card2({ item }) {
                     <div onClick={() => setShowPop(!showPop)}>
                         <div className={`${!showPop ? "yes" : "none"}`}>
                         <img src={`${url}${item.backdropPath}`} className="backdrop" alt="" onError="display='none'" width="300"  />
-                        <img src={item.logoUrl} className="backdrop_logo" alt=""  onError="display='none'" />
+                        {/* <img src={item.logoUrl} className="backdrop_logo" alt=""  onError="display='none'" /> */}
                         </div>
                     </div>
                     <div className={`${showPop ? "yes" : "none"}`}>
@@ -70,7 +70,7 @@ function Card2({ item }) {
                                     <button className='add-button' onClick={() => setShowPop(!showPop)} ><IoIosArrowDropdown style={{fontSize: "30px"}} /></button>
                                     </div>
                                 </div >
-                                <p className='card-text'>{item.runtime} min - {item.genres[0].name}</p>
+                                <p className='card-text'>{item.title}</p>
                                 
                             </div>
                         </HoverIntent>

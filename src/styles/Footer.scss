@@ -1,34 +1,31 @@
-$primaryClr : #999999;
-$secondaryClr : #d1d1d1; 
+$primaryClr: #999999;
+$secondaryClr: #d1d1d1;
 
+.underline {
+    text-decoration: underline;
 
-
-.underline  { 
-    text-decoration:underline;
-} 
-.underline:hover  { 
-    text-decoration:underline;
-    color: $primaryClr;
-} 
-
-
+    &:hover {
+        text-decoration: underline;
+        color: $primaryClr;
+    }
+}
 
 .footer-iconbox {
     display: flex;
     margin-left: 10px;
     font-size: 20px;
     color: $primaryClr;
-    margin:32px;
-} 
+    margin: 32px;
+}
 .footer-links {
     font-size: 10px;
     display: flex;
     justify-content: space-between;
     margin-left: 100px;
     margin-right: 100px;
-    margin:25px;
+    margin: 25px;
     text-decoration: none;
-    .link-container{
+    .link-container {
         display: flex;
         flex-direction: column;
         margin: 10px;
@@ -39,44 +36,43 @@ $secondaryClr : #d1d1d1;
             color: $primaryClr;
             font-size: 10px;
             list-style: none;
-            text-decoration:none !important;
+            text-decoration: none !important;
         }
         &:hover {
             opacity: 1;
             color: $secondaryClr;
         }
-    } 
-} 
+    }
+}
 @media screen and (min-width: 539px) {
     .footer-iconbox {
-        font-size: 20px; 
-    } 
+        font-size: 20px;
+    }
     .footer-links .link-container li {
         font-size: 10px;
-    } 
+    }
 }
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
     .footer-iconbox {
         font-size: 30px;
-    } 
+    }
     .footer-links .link-container li {
         font-size: 10px;
-    } 
+    }
 }
 @media screen and (min-width: 992px) {
     .footer-iconbox {
         font-size: 20px;
-    } 
-    .footer-links .link-container li {
-        font-size: 14px;
-    } 
-}
-@media screen and (min-width: 1200px) {
-    .footer-iconbox {
-        margin:40px; 
     }
     .footer-links .link-container li {
         font-size: 14px;
-    }  
+    }
 }
-
+@media screen and (min-width: 1200px) {
+    .footer-iconbox {
+        margin: 40px;
+    }
+    .footer-links .link-container li {
+        font-size: 14px;
+    }
+}
