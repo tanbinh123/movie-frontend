@@ -3,8 +3,8 @@ Netflix Clone build with React.
 A study to make a Netflix Clone build with React and Sass by combining it with a springboot application build by Irene van Dijk. 
 
 
-The user can navigate with a menu to diffirent pages. Also the company logo is added to the menu.
-When the user scrolls down the menu is still visible and transitions from transparant to black.
+~ The user can navigate with a menu to diffirent pages. Also the company logo is added to the menu.
+~ When the user scrolls down the menu is still visible and transitions from transparant to black.
 The links in the menu have a nice hover effect and the menu collapes to a hamburger menu on mobile devices.
 There is a searchbox in the navigationbar where you can search for actors.
 The searchbox is live updated with each input. 
