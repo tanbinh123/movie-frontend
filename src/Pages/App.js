@@ -6,11 +6,6 @@ import '../styles/App.css';
 import screenfull from 'screenfull'
 import Navigation from '../components/Navigation';
 import Info from '../components/Info.js'
-// import Lane80 from '../components/Lane80.js'
-// import Lane90 from '../components/Lane90.js'
-// import Lane00 from '../components/Lane00.js'
-// import LaneDisney from '../components/LaneDisney.js'
-// import LaneActor from '../components/LaneActor.js'
 import LaneAction from '../components/LaneAction.js'
 import LaneAdventure from '../components/LaneAdventure.js'
 import LaneComedy from '../components/LaneComedy.js'
@@ -77,13 +72,7 @@ function App({ arrayAction, arrayAdventure, arrayComedy, arrayCrime, arrayFamily
           <button className='info-button' onClick={toggleTrueFalse}><AiOutlineInfoCircle className='info-button-icon' />More info</button>
         </div>
       </div>
-      
       <div>{on ? <Info title={title} logo={logo} toggleTrueFalse={toggleTrueFalse} backdrop={backdrop} youtube={youtube} overview={overview} /> : null}</div>
-      {/* <Lane80 array80={array80} />
-      <Lane90 array90={array90}/>
-      <Lane00 array00={array00}/>
-      <LaneDisney arrayDisney={arrayDisney}/>
-      <LaneActor arrayJohnnydepp={arrayJohnnydepp}/>  */}
       <div className="lane"><LaneAdventure arrayAdventure={arrayAdventure}/> </div>
       <div className="lane"><LaneComedy arrayComedy={arrayComedy}/></div>
       <div className="lane"><LaneCrime arrayCrime={arrayCrime}/></div>

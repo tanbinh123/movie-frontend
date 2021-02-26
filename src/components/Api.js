@@ -3,25 +3,20 @@ import App from '../pages/App';
 
 require('dotenv').config()
 
-async function HideApi() {
+async function hideApi() {
     const api = {
         "key": process.env.REACT_APP_API,
     }
     return api.key;
 }
-HideApi();
+hideApi();
 
-function Api() {
+export default function Api() {
     const [bgimage, setBgimage] = useState("");
     const [overview, setOverview] = useState("");
     const [title, setTitle] = useState("")
     const [youtube, setYoutube] = useState("");
     const [logo, setLogo] = useState("");
-    const [array80, setArray80] = useState([]);
-    const [array90, setArray90] = useState([]);
-    const [array00, setArray00] = useState([]);
-    const [arrayJohnnydepp, setArrayJohnnydepp] = useState([]);
-    const [arrayDisney, setArrayDisney] = useState([]);
     const [arrayAction, setArrayAction] = useState([]);
     const [arrayComedy, setArrayComedy] = useState([]);
     const [arrayThriller, setArrayThriller] = useState([]);
@@ -37,11 +32,6 @@ function Api() {
             fetch(process.env.REACT_MAIN_OVERVIEW),
             fetch(process.env.REACT_MAIN_VIDEO),
             fetch(process.env.REACT_MAIN_BG),
-            fetch(process.env.REACT_80),
-            fetch(process.env.REACT_90),
-            fetch(process.env.REACT_00),
-            fetch(process.env.REACT_JOHNNYDEPP),
-            fetch(process.env.REACT_DISNEY),
             fetch(process.env.REACT_GENRE_1428),
             fetch(process.env.REACT_GENRE_35),
             fetch(process.env.REACT_GENRE_53),
@@ -61,11 +51,6 @@ function Api() {
             setTitle(data[0].title)
             setYoutube(data[1].results[1].key);
             setLogo(data[2].hdmovielogo[0].url);
-            setArray80(data[3])
-            setArray90(data[4])
-            setArray00(data[5])
-            setArrayJohnnydepp(data[6])
-            setArrayDisney(data[7])
             setArrayAction(data[8].results)
             setArrayComedy(data[9].results)
             setArrayThriller(data[10].results)
@@ -89,11 +74,6 @@ function Api() {
                 arrayCrime={arrayCrime}
                 arrayAdventure={arrayAdventure}
                 arrayFantasy={arrayFantasy}
-                arrayDisney={arrayDisney}
-                arrayJohnnydepp={arrayJohnnydepp}
-                array80={array80}
-                array90={array90}
-                array00={array00}
                 backdrop={backdrop}
                 overview={overview}
                 title={title}
@@ -103,4 +83,3 @@ function Api() {
         </div>
     );
 }
-export default Api;

@@ -2,7 +2,7 @@ import React from "react"
 import Card2 from './Card2.js'
 import '../styles/Lane2.css';
 
-function Cardwrapper2({ array }) {
+export default function Cardwrapper2({ array }) {
     return (
         <div>
             <ul className="cards-wrapper2">
@@ -12,4 +12,3 @@ function Cardwrapper2({ array }) {
         </div >
     );
 };
-export default Cardwrapper2;
