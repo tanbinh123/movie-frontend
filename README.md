@@ -1,5 +1,5 @@
 
-Netflix :popcorn: Clone build with React.
+Netflix :popcorn: Clone built with React.
 
 A study to make a Netflix Clone built with React and Sass by combining it with a springboot application built by Irene van Dijk. 
 
