@@ -1,7 +1,7 @@
 
 Netflix :popcorn: Clone build with React.
 
-A study to make a Netflix Clone build with React and Sass by combining it with a springboot application build by Irene van Dijk. 
+A study to make a Netflix Clone built with React and Sass by combining it with a springboot application built by Irene van Dijk. 
 
 <img width="1414" alt="Schermafbeelding 2021-04-07 om 15 57 06" src="https://user-images.githubusercontent.com/17217913/114380688-a02c9300-9b8a-11eb-8893-f3d92266fb7c.png">
 <img width="1416" alt="Schermafbeelding 2021-04-07 om 15 58 56" src="https://user-images.githubusercontent.com/17217913/114380653-99058500-9b8a-11eb-9209-fdd1f7f6274d.png">
